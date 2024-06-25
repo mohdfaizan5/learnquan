@@ -14,8 +14,8 @@ import Link from "next/link";
 
 const page = () => {
   return (
-    <main className="px-10 md:px-28 mt-20 flex justify-end">
-      <section className="fixed md:left-36 mt-16">
+    <main className="px-5 md:px-28 mt-20 flex flex-col md:flex-row justify-end">
+      <section className="md:fixed md:left-36 md:mt-16">
         <EachBigCard />
       </section>
       <section className="md:w-[50vw] flex flex-col items-center min-h-[100vh] bg-slate-200/0 gap-2 py-10">
@@ -34,26 +34,26 @@ const page = () => {
 const EachBigCard = () => {
   return (
     <Card className="w-96 md:w-[450px] h-72 flex flex-col items-start justify-between p-5 py-7 hover:border-slate-800">
-      <CardContent className="p-0">
+      <CardContent className="p-0 flex justify-between w-full items-start">
         <Image
-          src={"/svgs/surreal-hourglass.svg"}
+          src={"/lessons/intro-to-python/Lesson_1_Bookend_3-B5oO8u.png"}
           alt=""
-          width={120}
-          height={120}
+          width={100}
+          height={100}
         />
+        <p className="justify-end font-extralight text-sm flex items-center">
+          <Award size="18" color="#000000" variant="Bulk" />
+          14 lesson
+        </p>
       </CardContent>
-      <CardHeader className="p-0">
-        <h2 className="text-lg">Solving Equations</h2>
+      <CardHeader className="p-0 mt-2">
+        <h2 className="font-semibold text-lg">Python</h2>
         <div className="text-sm p-0">
           <h5 className="p-0">
             Stretch your analytic muscles with truth-tellers, liars, logical
             robots, and more.
           </h5>
         </div>
-        <p className="justify-end font-extralight text-sm flex items-center">
-          <Award size="18" color="#000000" variant="Bulk" />
-          14 lesson
-        </p>
       </CardHeader>
     </Card>
   );
@@ -70,7 +70,7 @@ const BoxTypedButton = ({
 }) => {
   return (
     <>
-      <Link href={"/courses/python/introduction"}>
+      <Link href={"/courses/intro-to-python/1"}>
         <button
           className={`relative inline-block px-4 py-2 font-medium group ${className}`}
         >

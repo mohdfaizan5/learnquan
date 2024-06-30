@@ -1,5 +1,11 @@
 import React from "react";
-
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { Add, ArrowLeft, ArrowRight, HambergerMenu } from "iconsax-react";
 import {
   Sheet,
   SheetContent,
@@ -8,44 +14,70 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { AiOutlineThunderbolt } from "react-icons/ai";
 import { Button } from "./ui/button";
 import Link from "next/link";
-import Image from "next/image";
-import { Book, HambergerMenu, Home } from "iconsax-react";
 
 const CourseNavbar = () => {
   return (
     <header className="fixed top-0 left-0 right-0 bg-white py-4 border-b flex justify-between px-16 items-center ">
       <div className="flex gap-10 items-center">
-        <h3 className="text-2xl font-semibold flex items-center">
-          {/* <Image
-            src={"/logo-base-256x256.png"}
-            height={60}
-            width={60}
-            alt="abs img"
-            className="hidden md:block"
-          />{" "} */}
-          IndieToolkit
-        </h3>
-        <nav className="text-black text-sm hidden md:flex gap-5 ">
-          <Link href={"/home"} className="flex items-center gap-1">
-            <Home size="20" />
-            Home
-          </Link>
-          <Link href={"/courses"} className="flex items-center gap-1">
-          <Book size="20" color="#000000"/>Courses
-          </Link>
-          {/* <Link href={"#"}>Roadmap</Link> */}
-          {/* <Link href={"#"}>Changelog</Link> */}
-        </nav>
+        <Link href={"/home"}>
+          <Add
+            className="rotate-45"
+            size="40"
+            color="#000000"
+            variant="Outline"
+          />
+        </Link>
       </div>
-      <div className="sm:flex  hidden gap-2">
-        <Link href={"/login"}>
-          <Button variant={"outline"}>Login</Button>
+      <nav className="text-black text-sm hidden md:flex gap-5 items-center">
+        <Link href={"/courses"} className="flex items-center gap-1">
+          <ArrowLeft />
         </Link>
-        <Link href={"signup"}>
-          <Button variant={"default"}>Get started now</Button>
+        <TooltipProvider>
+          <div className=" bg-gray-200 rounded-full flex gap-1 h-2.5">
+            <Link href={"1"} className="block">
+              <Tooltip>
+                <TooltipTrigger className="bg-green-500  w-20 h-2.5 rounded-full"></TooltipTrigger>
+                <TooltipContent>
+                  <p>Chapter 1</p>
+                </TooltipContent>
+              </Tooltip>
+            </Link>
+            <Link href={"2"} className="block">
+              <Tooltip>
+                <TooltipTrigger className="bg-green-500  w-20 h-2.5 rounded-full"></TooltipTrigger>
+                <TooltipContent>
+                  <p>Chapter 2</p>
+                </TooltipContent>
+              </Tooltip>
+            </Link>
+            <Link href={"3"} className="block">
+              <Tooltip>
+                <TooltipTrigger className="bg-green-500  w-20 h-2.5 rounded-full"></TooltipTrigger>
+                <TooltipContent>
+                  <p>Chapter 2</p>
+                </TooltipContent>
+              </Tooltip>
+            </Link>
+            <Link href={"2"} className="block">
+              <Tooltip>
+                <TooltipTrigger className="bg-green-500  w-20 h-2.5 rounded-full"></TooltipTrigger>
+                <TooltipContent>
+                  <p>Chapter 2</p>
+                </TooltipContent>
+              </Tooltip>
+            </Link>
+          </div>
+        </TooltipProvider>
+
+        <Link href={"/home"} className="flex items-center gap-1">
+          <ArrowRight />
         </Link>
+      </nav>
+      <div className="sm:flex items-center  hidden gap-2">
+        0 <AiOutlineThunderbolt className="text-xl text-green-800 -rotate-12" />
       </div>
       <div className="md:hidden">
         <Sheet key={"left"}>

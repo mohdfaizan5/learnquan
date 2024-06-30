@@ -1,125 +1,125 @@
 "use client";
+
+import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import React from "react";
-import { Button } from "../ui/button";
+import { RadioGroupItem, RadioGroup } from "@/components/ui/radio-group";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { FaCheck } from "react-icons/fa";
+import { RxCross2 } from "react-icons/rx";
+import { AiOutlineFileUnknown } from "react-icons/ai";
+import { toast } from "sonner";
 
-const Quiz = ({ children }: { children: React.ReactNode }) => {
-  return <Card>{children}</Card>;
-};
-
-const QuizQuestion = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <CardHeader>
-      <CardTitle className="text-xs">Quiz time</CardTitle>
-      <CardDescription>{children}</CardDescription>
-    </CardHeader>
-  );
-};
-
-const QuizOptions = () => {
-  const { register, handleSubmit, reset } = useForm();
-  return (
-    <form
-      onSubmit={handleSubmit((data) => {
-        console.log(data);
-      })}
-    >
-      <CardContent>
-        <EachRadioBox
-          id="1"
-          reg={register("answer", { value: "A" })}
-          quizUniqueId="py-1"
-          text="one"
-          value="1"
-          key={"1"}
-        />
-        <EachRadioBox
-          id="2"
-          reg={register("answer", { value: "B" })}
-          quizUniqueId="py-1"
-          text="two"
-          value="2"
-          key={"2"}
-        />
-
-        {/* <RadioGroup>
-          <div className="flex items-center space-x-2">
-            <RadioGroupItem value="1" id="1" />
-            <Label htmlFor="1">1 One</Label>
-          </div>
-          <div className="flex items-center space-x-2">
-            <RadioGroupItem value="2" id="2" />
-            <Label htmlFor="2">2 Two</Label>
-          </div>
-          <div className="flex items-center space-x-2">
-            <RadioGroupItem value="3" id="3" />
-            <Label htmlFor="3">3 Three</Label>
-          </div>
-          <div className="flex items-center space-x-2">
-            <RadioGroupItem value="4" id="4" />
-            <Label htmlFor="4">4 Four</Label>
-          </div>
-        </RadioGroup> */}
-      </CardContent>
-      <CardFooter className="flex justify-between">
-        <Button variant={"outline"} type="submit">
-          Submit{" "}
-        </Button>
-        <Button variant={"ghost"}>Explanation</Button>
-      </CardFooter>
-    </form>
-    // <CardContent>
-    //   <RadioGroup>
-    //     {questions.map((question) => (
-    //       <div className="flex items-center space-x-2">
-    //         <RadioGroupItem value="2" id="2" />
-    //         <Label htmlFor="2">Nothing will happen.</Label>
-    //       </div>
-    //     ))}
-    //   </RadioGroup>
-    // </CardContent>
-  );
-};
-
-// <div className="flex items-center space-x-2">
-//   <RadioGroupItem value="option-two" id="option-two" />
-//   <Label htmlFor="option-two">It will give an error.</Label>
-// </div>
-
-const EachRadioBox = ({
-  text,
-  id,
-  value,
-  quizUniqueId,
-  reg,
+export const Quiz = ({
+  question,
+  options,
+  answer,
+  guess,
 }: {
-  reg: any;
-  text: string;
-  id: string;
-  value: string;
-  quizUniqueId: string;
+  question: string;
+  options: string[];
+  answer: number;
+  guess?: string;
 }) => {
+  const { register, handleSubmit } = useForm();
+
+  const handleQuiz = (data: any) => {
+    if (options[answer] == data.answer) {
+      setIsCorrectAnswer(true);
+    } else {
+      setIsCorrectAnswer(false);
+    }
+  };
+  const [isCorrectAnswer, setIsCorrectAnswer] = useState<null | boolean>(null);
   return (
-    <Label
-      className="flex items-center w-full mb-1 px-5 py-3 gap-2 ps-4 border border-gray-200 rounded "
-      htmlFor={id}
-    >
-      <input id={id} type="radio" {...reg} value={value} name={quizUniqueId} />
-      {text}
-    </Label>
+    <div className="flex flex-col items-center mt-20">
+      {question}
+      <form
+        className={`py-3 my-5 w-full`}
+        //   ${isCorrectAnswer == false ? "border border-red-400" : ""}
+        onSubmit={handleSubmit((data) => handleQuiz(data))}
+      >
+        {options.map((option, index) => (
+          <Label
+            className={`flex items-center w-full mb-1 px-5 py-3 gap-2 ps-4 border border-gray-200 rounded relative ${
+              answer == index && isCorrectAnswer
+                ? "border-green-500 shadow shadow-green-300"
+                : ""
+            }`}
+            htmlFor={`${option}${index}`}
+          >
+            {/* {index} {answer} */}
+            <input
+              id={`${option}${index}`}
+              {...register("answer")}
+              value={option}
+              type="radio"
+              required
+            />
+            {option}
+            {answer == index && (
+              <FaCheck
+                className={`${
+                  isCorrectAnswer ? "block" : "hidden"
+                } text-green-500 absolute right-1 top-1`}
+              />
+            )}
+          </Label>
+        ))}
+        {isCorrectAnswer == false && (
+          <span className="text-center text-sm text-red-500  flex items-center gap-3 justify-center mb-2">
+            Incorrect Answer
+            <RxCross2 className="text-red-600" />
+          </span>
+        )}
+        <div className="flex  mt-5 justify-between items-center">
+          <Button className="" type="submit">
+            Submit
+          </Button>
+          {guess && (
+            <Button
+              type="button"
+              className="flex items-center"
+              onClick={() => {
+                toast(guess);
+              }}
+              variant={"outline"}
+            >
+              <AiOutlineFileUnknown />
+              Hint?
+            </Button>
+          )}
+        </div>
+      </form>
+    </div>
   );
 };
-
-export { Quiz, QuizQuestion, QuizOptions };
-
-// export default Quiz;
+{
+  /* How do we take which button was selected */
+}
+{
+  /* TODO: How do we take input on radio input */
+}
+{
+  /* <Label
+          className="flex items-center w-full mb-1 px-5 py-3 gap-2 ps-4 border border-gray-200 rounded "
+          htmlFor={"1"}
+        >
+          <input id={"1"} {...register("a", { value: "1" })} type="radio" />
+          Hi
+        </Label> 
+        
+          const questions = [
+    {
+      question: "What is the capital of France?",
+      options: ["London", "Paris", "Berlin"],
+      answer: "B",
+    },
+    {
+      question: "What is the largest planet in our solar system?",
+      options: ["Earth", "Jupiter", "Mars"],
+      answer: "B",
+    },
+  ];
+        */
+}

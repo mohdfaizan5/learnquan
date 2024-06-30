@@ -1,40 +1,38 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "@/styles/typography.css";
 import Image from "next/image";
-import Link from "next/link";
 import {
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
 import { ArrowLeft, Refresh2 } from "iconsax-react";
-import { Quiz, QuizOptions, QuizQuestion } from "@/components/client/Quiz";
-import { Label } from "@/components/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+// import { Quiz, QuizOptions, QuizQuestion } from "@/components/client/Quiz";
 import { useRouter } from "next/navigation";
+import { Quiz } from "@/components/client/Quiz";
 
 const page = () => {
   const [count, setCount] = useState(3);
   const router = useRouter();
+  // const lastElementRef = useRef();
   return (
-    <div className="flex flex-col pt-20 items-start px-5 gap-2">
-      <h1 className="font-bold text-3xl">Welcome to Python</h1>
+    <div className="flex flex-col pt-20 items-center px-5 gap-2 mx-auto max-w-[30rem]">
+      <h2 className="font-bold text-3xl">Welcome to Python</h2>
       <Image
         src={"/lessons/intro-to-python/Lesson_1_Bookend_3-B5oO8u.png"}
         height={250}
         width={250}
         alt=""
       />
-      <p>
+      <p className="max-w-[30rem]">
         Python is one of the most popular programming languages — it's been used
         to write millions of computer programs.
       </p>
-      <p>
+      <p className="max-w-[30rem]">
         This is a very simple Python program. Press “Run” to see what it does.
       </p>
       {count <= 2 && (
@@ -45,7 +43,10 @@ const page = () => {
               <CardDescription>Python</CardDescription>
             </CardHeader>
             <CardContent>
-              <p className="inline-code">print("Welcome to Python!")</p>
+              <p className="font-mono text-sm bg-muted ">
+                variable_name = "value"
+              </p>
+              <p className="font-mono text-sm bg-muted ">name = "faizan"</p>
             </CardContent>
             <CardFooter className="flex justify-between">
               <Button>Run </Button>
@@ -56,33 +57,19 @@ const page = () => {
           </Card>
         </InitialHidden>
       )}
-      {/* QUIZ */}
       {count <= 1 && (
         <InitialHidden>
-          <Quiz>
-            <QuizQuestion>
-              What does the program display if you remove the quotes around the
-              message? (Edit the program above to find out.)
-            </QuizQuestion>
-
-            <QuizOptions></QuizOptions>
-            {/* 
-          <QuizOption>Nothing will happen.</QuizOption>
-          <QuizOption>It will give an error.</QuizOption> */}
-            {/* </QuizOptions> */}
-          </Quiz>
+          <Quiz
+            answer={1}
+            key={1}
+            options={["A", "B", "C"]}
+            question=" What does the program display if you remove the quotes around the
+              message? (Edit the program above to find out.)"
+            guess="Read question again"
+          />
         </InitialHidden>
       )}
-      {/*
-        <Quiz>
-          <QuizQuestion>what is the question?</QuizQuestion>
-          <QuizOption answer>1</QuizOption>
-          <QuizOption >2</QuizOption>
-          <QuizOption >3</QuizOption>
-        </Quiz>
-
-        */}
-      <div className="flex justify-between w-full">
+      <div className="flex gap-10 mt-5 mb-10">
         <Button
           variant={"outline"}
           size={"icon"}
@@ -99,7 +86,7 @@ const page = () => {
           <ArrowLeft />
         </Button>
         <Button
-          className="w-full"
+          className="w-72"
           onClick={() => {
             // show hidden block
             if (count === 1) {
@@ -107,14 +94,19 @@ const page = () => {
             }
             console.log(count);
             setCount(count - 1);
+            // const elementToScrollTo = document.getElementById("lastElement");
+
+            // elementToScrollTo.scrollIntoView({ behavior: "smooth" });
+            // window.scrollTo({
+            //   top: document.body.scrollHeight,
+            //   // behavior: "smooth",
+            // });
           }}
         >
           {count > 1 ? "Next" : "Continue"}
         </Button>
       </div>
-
-      {/* <Link className="w-full" href={"3"}> */}
-      {/* </Link> */}
+      <div id={"lastElement"}></div>
     </div>
   );
 };

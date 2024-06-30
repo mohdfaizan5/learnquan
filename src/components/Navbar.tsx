@@ -37,7 +37,7 @@ const Navbar = () => {
 
   if (!courseDashboard) {
     return (
-      <header className="fixed top-0 left-0 right-0 bg-white py-4 border-b flex justify-between px-16 items-center ">
+      <header className="fixed top-0 left-0 right-0 bg-white py-4 border-b flex justify-between px-16 items-center z-50">
         <div className="flex gap-10 items-center">
           <h3 className="text-2xl font-semibold flex items-center">
             LearnQuan
@@ -103,30 +103,38 @@ const Navbar = () => {
           </Link>
           <TooltipProvider>
             <div className=" bg-gray-200 rounded-full flex gap-1 h-2.5">
-              <Tooltip>
-                <TooltipTrigger className="bg-green-500 w-20 h-2.5 rounded-full"></TooltipTrigger>
-                <TooltipContent>
-                  <p>Chapter 1</p>
-                </TooltipContent>
-              </Tooltip>
-              <Tooltip>
-                <TooltipTrigger className="bg-green-500 w-20 h-2.5 rounded-full"></TooltipTrigger>
-                <TooltipContent>
-                  <p>Chapter 2</p>
-                </TooltipContent>
-              </Tooltip>
-              <Tooltip>
-                <TooltipTrigger className="bg-green-500 w-20 h-2.5 rounded-full"></TooltipTrigger>
-                <TooltipContent>
-                  <p>Chapter 3</p>
-                </TooltipContent>
-              </Tooltip>
-              <Tooltip>
-                <TooltipTrigger className="bg-green-500 w-20 h-2.5 rounded-full"></TooltipTrigger>
-                <TooltipContent>
-                  <p>Chapter 4</p>
-                </TooltipContent>
-              </Tooltip>
+              <Link href={"1"} className="block">
+                <Tooltip>
+                  <TooltipTrigger className="bg-green-500  w-20 h-2.5 rounded-full"></TooltipTrigger>
+                  <TooltipContent>
+                    <p>Chapter 1</p>
+                  </TooltipContent>
+                </Tooltip>
+              </Link>
+              <Link href={"2"} className="block">
+                <Tooltip>
+                  <TooltipTrigger className="bg-green-500  w-20 h-2.5 rounded-full"></TooltipTrigger>
+                  <TooltipContent>
+                    <p>Chapter 2</p>
+                  </TooltipContent>
+                </Tooltip>
+              </Link>
+              <Link href={"3"} className="block">
+                <Tooltip>
+                  <TooltipTrigger className="bg-green-500  w-20 h-2.5 rounded-full"></TooltipTrigger>
+                  <TooltipContent>
+                    <p>Chapter 2</p>
+                  </TooltipContent>
+                </Tooltip>
+              </Link>
+              <Link href={"2"} className="block">
+                <Tooltip>
+                  <TooltipTrigger className="bg-green-500  w-20 h-2.5 rounded-full"></TooltipTrigger>
+                  <TooltipContent>
+                    <p>Chapter 2</p>
+                  </TooltipContent>
+                </Tooltip>
+              </Link>
             </div>
           </TooltipProvider>
 

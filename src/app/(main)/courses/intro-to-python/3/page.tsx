@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import React, { useState } from "react";
 import "@/styles/typography.css";
 import Image from "next/image";
-import Link from "next/link";
 import {
   Card,
   CardContent,
@@ -14,8 +13,6 @@ import {
 } from "@/components/ui/card";
 import { ArrowLeft, Refresh2 } from "iconsax-react";
 import { Quiz, QuizOptions, QuizQuestion } from "@/components/client/Quiz";
-import { Label } from "@/components/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useRouter } from "next/navigation";
 
 const page = () => {
@@ -23,16 +20,16 @@ const page = () => {
   const router = useRouter();
   return (
     <div className="flex flex-col pt-20 items-start px-5 gap-2">
-      <h1 className="font-bold text-3xl">Welcome to Python</h1>
+      <h1 className="font-bold text-3xl">Variables</h1>
       <Image
         src={"/lessons/intro-to-python/Lesson_1_Bookend_3-B5oO8u.png"}
         height={250}
         width={250}
         alt=""
+        className="mx-auto rotate-90 grayscale"
       />
       <p>
-        Python is one of the most popular programming languages — it's been used
-        to write millions of computer programs.
+        Variables are use in python hold some data and use it into later stage
       </p>
       <p>
         This is a very simple Python program. Press “Run” to see what it does.
@@ -45,7 +42,10 @@ const page = () => {
               <CardDescription>Python</CardDescription>
             </CardHeader>
             <CardContent>
-              <p className="inline-code">print("Welcome to Python!")</p>
+              <p className="font-mono text-sm bg-muted ">
+                variable_name = "value"
+              </p>
+              <p className="font-mono text-sm bg-muted ">name = "faizan"</p>
             </CardContent>
             <CardFooter className="flex justify-between">
               <Button>Run </Button>
@@ -60,10 +60,7 @@ const page = () => {
       {count <= 1 && (
         <InitialHidden>
           <Quiz>
-            <QuizQuestion>
-              What does the program display if you remove the quotes around the
-              message? (Edit the program above to find out.)
-            </QuizQuestion>
+            <QuizQuestion>What is a variable?</QuizQuestion>
 
             <QuizOptions></QuizOptions>
             {/* 
@@ -73,15 +70,7 @@ const page = () => {
           </Quiz>
         </InitialHidden>
       )}
-      {/*
-        <Quiz>
-          <QuizQuestion>what is the question?</QuizQuestion>
-          <QuizOption answer>1</QuizOption>
-          <QuizOption >2</QuizOption>
-          <QuizOption >3</QuizOption>
-        </Quiz>
 
-        */}
       <div className="flex justify-between w-full">
         <Button
           variant={"outline"}
@@ -90,7 +79,7 @@ const page = () => {
           onClick={() => {
             // show hidden block
             if (count === 3) {
-              router.push("1");
+              router.push("2");
             }
             console.log(count);
             setCount(count + 1);
@@ -103,7 +92,7 @@ const page = () => {
           onClick={() => {
             // show hidden block
             if (count === 1) {
-              router.push("3");
+              router.push("4");
             }
             console.log(count);
             setCount(count - 1);
@@ -112,9 +101,6 @@ const page = () => {
           {count > 1 ? "Next" : "Continue"}
         </Button>
       </div>
-
-      {/* <Link className="w-full" href={"3"}> */}
-      {/* </Link> */}
     </div>
   );
 };

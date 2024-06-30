@@ -37,15 +37,15 @@ const QuizOptions = () => {
       <CardContent>
         <EachRadioBox
           id="1"
-          reg={register('answer', { value: 'A' })}
+          reg={register("answer", { value: "A" })}
           quizUniqueId="py-1"
           text="one"
           value="1"
           key={"1"}
-          />
+        />
         <EachRadioBox
           id="2"
-          reg={register('answer', { value: 'B' })}
+          reg={register("answer", { value: "B" })}
           quizUniqueId="py-1"
           text="two"
           value="2"

@@ -39,7 +39,7 @@ const Page = () => {
 
         {question.options.map((option, index) => (
           <Label
-            key={i}
+            key={index}
             className={`flex items-center w-full mb-1 px-5 py-3 gap-2 ps-4 border border-gray-200 rounded relative ${
               question.answer == index && isCorrectAnswer
                 ? "border-green-500 shadow shadow-green-300"

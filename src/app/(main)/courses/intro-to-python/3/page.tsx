@@ -15,7 +15,7 @@ import { ArrowLeft, Refresh2 } from "iconsax-react";
 import { useRouter } from "next/navigation";
 import { Quiz } from "@/components/client/Quiz";
 
-const page = () => {
+const Page = () => {
   const [count, setCount] = useState(3);
   const router = useRouter();
   return (
@@ -32,7 +32,7 @@ const page = () => {
         Variables are use in python hold some data and use it into later stage
       </p>
       <p>
-        This is a very simple Python program. Press “Run” to see what it does.
+        This is a very simple Python program. Press &quot;Run&quot; to see what it does.
       </p>
       {count <= 2 && (
         <InitialHidden>
@@ -43,9 +43,9 @@ const page = () => {
             </CardHeader>
             <CardContent>
               <p className="font-mono text-sm bg-muted ">
-                variable_name = "value"
+                variable_name = &quot;value&quot;
               </p>
-              <p className="font-mono text-sm bg-muted ">name = "faizan"</p>
+              <p className="font-mono text-sm bg-muted ">name = &quot;faizan&quot;</p>
             </CardContent>
             <CardFooter className="flex justify-between">
               <Button>Run </Button>
@@ -107,4 +107,4 @@ const InitialHidden = ({ children }: { children: React.ReactNode }) => {
   return <section className="w-full">{children}</section>;
 };
 
-export default page;
+export default Page;

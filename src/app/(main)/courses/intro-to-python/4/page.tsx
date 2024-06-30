@@ -15,7 +15,7 @@ import { ArrowLeft, Refresh2 } from "iconsax-react";
 import { useRouter } from "next/navigation";
 import { Quiz } from "@/components/client/Quiz";
 
-const page = () => {
+const Page = () => {
   const [count, setCount] = useState(2);
   const router = useRouter();
   return (
@@ -32,7 +32,7 @@ const page = () => {
         Variables are use in python hold some data and use it into later stage
       </p>
       <p>
-        This is a very simple Python program. Press “Run” to see what it does.
+        This is a very simple Python program. Press  to see what it does.
       </p>
       {count <= 1 && (
         <InitialHidden>
@@ -84,4 +84,4 @@ const InitialHidden = ({ children }: { children: React.ReactNode }) => {
   return <section className="w-full">{children}</section>;
 };
 
-export default page;
+export default Page;

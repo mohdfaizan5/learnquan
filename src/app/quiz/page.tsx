@@ -8,8 +8,7 @@ import { useForm } from "react-hook-form";
 import { FaCheck } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
 
-
-const page = () => {
+const Page = () => {
   const { register, handleSubmit } = useForm();
   const question = {
     question: "What is the capital of France?",
@@ -40,6 +39,7 @@ const page = () => {
 
         {question.options.map((option, index) => (
           <Label
+            key={i}
             className={`flex items-center w-full mb-1 px-5 py-3 gap-2 ps-4 border border-gray-200 rounded relative ${
               question.answer == index && isCorrectAnswer
                 ? "border-green-500 shadow shadow-green-300"
@@ -65,14 +65,18 @@ const page = () => {
             )}
           </Label>
         ))}
-        {isCorrectAnswer == false && <span className="text-center text-sm text-red-500  flex items-center gap-3 justify-center mb-2">Incorrect Answer<RxCross2 className="text-red-600"/>
-          </span>}
+        {isCorrectAnswer == false && (
+          <span className="text-center text-sm text-red-500  flex items-center gap-3 justify-center mb-2">
+            Incorrect Answer
+            <RxCross2 className="text-red-600" />
+          </span>
+        )}
         <Button>Submit</Button>
       </form>
     </div>
   );
 };
-export default page;
+export default Page;
 {
   /* How do we take which button was selected */
 }

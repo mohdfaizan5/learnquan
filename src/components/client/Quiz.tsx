@@ -41,6 +41,7 @@ export const Quiz = ({
       >
         {options.map((option, index) => (
           <Label
+            key={option.substring(0, 5) + index}
             className={`flex items-center w-full mb-1 px-5 py-3 gap-2 ps-4 border border-gray-200 rounded relative ${
               answer == index && isCorrectAnswer
                 ? "border-green-500 shadow shadow-green-300"

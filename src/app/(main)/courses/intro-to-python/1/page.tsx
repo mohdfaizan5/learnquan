@@ -4,7 +4,7 @@ import "@/styles/typography.css";
 import Image from "next/image";
 import Link from "next/link";
 
-const page = () => {
+const Page = () => {
   return (
     <div className="flex flex-col pt-20 items-center max-w-[30rem] mx-auto px-5 gap-2 ">
       <Image
@@ -16,7 +16,7 @@ const page = () => {
       <h1 className="font-bold text-3xl mt-1">Welcome to Python</h1>
       <p className="mt-1 mb-2">
         We can begin to harness the power of Python programming with just a few
-        ideas. Let's jump in
+        ideas. Let&apos;s jump in
       </p>
 
       <Link className="w-full my-5" href={"2"}>
@@ -26,4 +26,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

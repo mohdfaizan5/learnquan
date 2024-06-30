@@ -15,7 +15,7 @@ import { ArrowLeft, Refresh2 } from "iconsax-react";
 import { useRouter } from "next/navigation";
 import { Quiz } from "@/components/client/Quiz";
 
-const page = () => {
+const Page = () => {
   const [count, setCount] = useState(3);
   const router = useRouter();
   // const lastElementRef = useRef();
@@ -29,7 +29,7 @@ const page = () => {
         alt=""
       />
       <p className="max-w-[30rem]">
-        Python is one of the most popular programming languages — it's been used
+        Python is one of the most popular programming languages — it&apos;s been used
         to write millions of computer programs.
       </p>
       <p className="max-w-[30rem]">
@@ -44,9 +44,9 @@ const page = () => {
             </CardHeader>
             <CardContent>
               <p className="font-mono text-sm bg-muted ">
-                variable_name = "value"
+                variable_name = &quot;value&quot;
               </p>
-              <p className="font-mono text-sm bg-muted ">name = "faizan"</p>
+              <p className="font-mono text-sm bg-muted ">name = &quot;faizan&quot;</p>
             </CardContent>
             <CardFooter className="flex justify-between">
               <Button>Run </Button>
@@ -115,4 +115,4 @@ const InitialHidden = ({ children }: { children: React.ReactNode }) => {
   return <section className="w-full">{children}</section>;
 };
 
-export default page;
+export default Page;

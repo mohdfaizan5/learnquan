@@ -10,7 +10,7 @@ import {
 import { CSS } from "@dnd-kit/utilities";
 import React, { useState } from "react";
 import { CgMenuGridO } from "react-icons/cg";
-
+// www.youtube.com/watch?v=dL5SOdgMbRY
 const page = () => {
   const [tasks, setTasks] = useState([
     { id: 1, title: "Go to Gym" },
@@ -40,9 +40,9 @@ const page = () => {
   };
   return (
     <div className="flex flex-col items-center justify-center min-h-[60vh]">
-      <h1>Todos☑</h1>
+      <h1>Array</h1>
       <DndContext onDragEnd={handleDrag} collisionDetection={closestCorners}>
-        <section className="w-96 border rounded-sm p-5 my-5 min-h-32 flex flex-col gap-1">
+        <section className="w-56 border rounded-sm p-5 my-5 min-h-32 flex flex-col gap-1">
           <SortableContext items={tasks} strategy={verticalListSortingStrategy}>
             {tasks.map((task) => (
               <EachTodo todo={task.title} id={task.id} key={task.id} />
@@ -81,11 +81,11 @@ const EachTodo = ({ todo, id }: { todo: string; id: any }) => {
       ref={setNodeRef}
       {...attributes}
       {...listeners}
-      className="flex items-center justify-between bg-slate-200 rounded-sm p-1 px-3 hover:bg-slate-300"
+      className="flex items-center justify-center bg-slate-200 rounded-sm h-12 p-1 px-3 hover:bg-slate-300"
     >
       {/* {todo} */}
-      {id}
-      <CgMenuGridO />
+      <h3>{id}</h3>
+      {/* <CgMenuGridO /> */}
     </div>
   );
 };

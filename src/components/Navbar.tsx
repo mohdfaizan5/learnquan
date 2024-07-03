@@ -50,8 +50,6 @@ const Navbar = () => {
                 Courses
               </div>
             </Link>
-            {/* <Link href={"#"}>Roadmap</Link> */}
-            {/* <Link href={"#"}>Changelog</Link> */}
           </nav>
         </div>
         <div className="sm:flex  hidden gap-2">

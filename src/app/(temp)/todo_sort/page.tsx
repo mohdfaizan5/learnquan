@@ -1,4 +1,5 @@
 "use client";
+import "@/styles/typography.css"
 import { Button } from "@/components/ui/button";
 import { closestCorners, DndContext } from "@dnd-kit/core";
 import {
@@ -39,10 +40,10 @@ const page = () => {
     });
   };
   return (
-    <div className="flex flex-col items-center justify-center min-h-[60vh]">
-      <h1>Array</h1>
+    <div className="flex flex-col items-center justify-center min-h-[70vh]">
+      <h2>Array</h2>
       <DndContext onDragEnd={handleDrag} collisionDetection={closestCorners}>
-        <section className="w-56 border rounded-sm p-5 my-5 min-h-32 flex flex-col gap-1">
+        <section className="w-56 border border-primary/40 rounded-sm p-5 my-5 min-h-32 flex flex-col gap-1">
           <SortableContext items={tasks} strategy={verticalListSortingStrategy}>
             {tasks.map((task) => (
               <EachTodo todo={task.title} id={task.id} key={task.id} />
@@ -84,7 +85,7 @@ const EachTodo = ({ todo, id }: { todo: string; id: any }) => {
       className="flex items-center justify-center bg-slate-200 rounded-sm h-12 p-1 px-3 hover:bg-slate-300"
     >
       {/* {todo} */}
-      <h3>{id}</h3>
+      <h4>{id}</h4>
       {/* <CgMenuGridO /> */}
     </div>
   );

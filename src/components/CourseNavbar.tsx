@@ -20,7 +20,10 @@ import Link from "next/link";
 
 const CourseNavbar = () => {
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white py-4 border-b flex justify-between px-16 items-center ">
+    <header
+      className="fixed top-0 left-0 right-0 bg-white py-4 border-b flex justify-between px-16 items-center "
+      style={{ zIndex: 100 }}
+    >
       <div className="flex gap-10 items-center">
         <Link href={"/home"}>
           <Add

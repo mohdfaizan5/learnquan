@@ -19,12 +19,12 @@ const page = () => {
           />
           <EachBigCard
             image="/svgs/abstract-art-4.svg"
-            title="Data Analysis"
-            href="/courses/intro-to-python"
+            title="Numbers System"
+            href="/courses/numbers-system"
           />
           <EachBigCard
             image="/svgs/abstract-art-3.svg"
-            title="Foundational Math"
+            title="Programming In C"
             href="/courses/intro-to-python"
           />
         </section>

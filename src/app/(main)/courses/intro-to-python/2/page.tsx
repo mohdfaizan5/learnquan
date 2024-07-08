@@ -18,6 +18,13 @@ import { Quiz } from "@/components/client/Quiz";
 const Page = () => {
   const [count, setCount] = useState(3);
   const router = useRouter();
+  const submitBtn = useRef(null);
+  const scrollToBtn = () => {
+    if (submitBtn.current) {
+      submitBtn.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   // const lastElementRef = useRef();
   return (
     <div className="flex flex-col pt-20 items-center px-5 gap-2 mx-auto max-w-[30rem]">
@@ -29,8 +36,8 @@ const Page = () => {
         alt=""
       />
       <p className="max-w-[30rem]">
-        Python is one of the most popular programming languages — it&apos;s been used
-        to write millions of computer programs.
+        Python is one of the most popular programming languages — it&apos;s been
+        used to write millions of computer programs.
       </p>
       <p className="max-w-[30rem]">
         This is a very simple Python program. Press “Run” to see what it does.
@@ -46,7 +53,9 @@ const Page = () => {
               <p className="font-mono text-sm bg-muted ">
                 variable_name = &quot;value&quot;
               </p>
-              <p className="font-mono text-sm bg-muted ">name = &quot;faizan&quot;</p>
+              <p className="font-mono text-sm bg-muted ">
+                name = &quot;faizan&quot;
+              </p>
             </CardContent>
             <CardFooter className="flex justify-between">
               <Button>Run </Button>
@@ -86,7 +95,7 @@ const Page = () => {
           <ArrowLeft />
         </Button>
         <Button
-          className="w-72"
+          className="w-72 mb-20"
           onClick={() => {
             // show hidden block
             if (count === 1) {
@@ -94,6 +103,9 @@ const Page = () => {
             }
             console.log(count);
             setCount(count - 1);
+            setTimeout(() => {
+              scrollToBtn();
+            }, 500);
             // const elementToScrollTo = document.getElementById("lastElement");
 
             // elementToScrollTo.scrollIntoView({ behavior: "smooth" });
@@ -106,7 +118,7 @@ const Page = () => {
           {count > 1 ? "Next" : "Continue"}
         </Button>
       </div>
-      <div id={"lastElement"}></div>
+      <div ref={submitBtn}></div>
     </div>
   );
 };

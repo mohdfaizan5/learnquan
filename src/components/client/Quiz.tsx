@@ -1,5 +1,4 @@
 "use client";
-
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { RadioGroupItem, RadioGroup } from "@/components/ui/radio-group";
@@ -15,11 +14,13 @@ export const Quiz = ({
   options,
   answer,
   guess,
+  className,
 }: {
   question: string;
   options: string[];
   answer: number;
   guess?: string;
+  className?: string;
 }) => {
   const { register, handleSubmit } = useForm();
 
@@ -32,8 +33,8 @@ export const Quiz = ({
   };
   const [isCorrectAnswer, setIsCorrectAnswer] = useState<null | boolean>(null);
   return (
-    <div className="flex flex-col items-center mt-20">
-      {question}
+    <div className={`flex flex-col  items-start mt-20 ${className}`}>
+      <h4>{question}</h4>
       <form
         className={`py-3 my-5 w-full`}
         //   ${isCorrectAnswer == false ? "border border-red-400" : ""}

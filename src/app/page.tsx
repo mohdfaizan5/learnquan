@@ -1,5 +1,10 @@
+import { getUser } from "@/lib/lucia";
+import { redirect } from "next/navigation";
 
-const page = () => {
+const page = async() => {
+  const user = await getUser();
+  if (user) redirect("/home");
+
   return <div>landing page</div>;
 };
 

@@ -18,8 +18,11 @@ import { signUpFormSchema } from "@/types/forms";
 import { signUpAction } from "@/actions/auth";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
+import { useStore } from "@/state/general";
 
 const SignUpForm = () => {
+  const { count, inc } = useStore();
+
   const form = useForm<z.infer<typeof signUpFormSchema>>({
     resolver: zodResolver(signUpFormSchema),
     defaultValues: {
@@ -48,6 +51,10 @@ const SignUpForm = () => {
         onSubmit={form.handleSubmit(onSubmit)}
         className="flex flex-col items-center justify-center"
       >
+        <div>
+          <span>{count}</span>
+          <button onClick={inc}>one up</button>
+        </div>
         <FormField
           name="name"
           control={form.control}

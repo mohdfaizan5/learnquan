@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { getUser } from "@/lib/lucia";
 import { redirect } from "next/navigation";
+import CustomButton from "@/components/ui/CustomButton";
 
 const page = async () => {
   const user = await getUser();
@@ -15,7 +16,7 @@ const page = async () => {
       <div className="">
         <h3 className="text-xl pt-10 font-semibold mb-2">Continue </h3>
         <div className=""></div>
-
+        <CustomButton>hi</CustomButton>
         {/* <section className="grid grid-cols-3 md:grid-cols-3 "> */}
         <section className="flex flex-col gap-3 mx-auto w-full  md:flex-row">
           <EachBigCard

@@ -14,12 +14,13 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const user = await getUser();
-  if(!user) redirect("/login");
-  
+  if (!user) redirect("/login");
+
   return (
     <div>
       <CourseNavbar />
       {children}
+      
     </div>
   );
 }

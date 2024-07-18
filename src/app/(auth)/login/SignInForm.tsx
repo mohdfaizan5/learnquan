@@ -14,11 +14,10 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
-
-export const signInFormSchema = z.object({
-  email: z.string().email(),
-  password: z.string().min(6),
-});
+import { signInFormSchema } from "@/types/forms";
+import { signInAction } from "@/actions/auth";
+import { toast } from "sonner";
+import { useRouter } from "next/navigation";
 
 const SignInForm = () => {
   const form = useForm<z.infer<typeof signInFormSchema>>({
@@ -29,15 +28,23 @@ const SignInForm = () => {
     },
   });
 
-  const onSubmit = (values: z.infer<typeof signInFormSchema>) => {
+  const router = useRouter();
+  const onSubmit = async (values: z.infer<typeof signInFormSchema>) => {
     console.log(values);
+    const res = await signInAction(values);
+    if (res?.success) {
+      toast.success("Login successful");
+      router.push("/courses");
+    } else {
+      toast.error(res?.error);
+    }
   };
 
   return (
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="flex flex-col items-center justify-center"
+        className="flex flex-col items-center justify-center gap-2"
       >
         <FormField
           name="email"
@@ -68,7 +75,7 @@ const SignInForm = () => {
           )}
         />
 
-        <Button>Login</Button>
+        <Button className="w-full">Login</Button>
         <Link className="underline text-primary text-sm" href={"/signup"}>
           Don't have an account?
         </Link>

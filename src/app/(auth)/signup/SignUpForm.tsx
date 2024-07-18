@@ -14,18 +14,10 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-
-export const signUpFormSchema = z
-  .object({
-    name: z.string().min(3),
-    email: z.string().email(),
-    password: z.string().min(6),
-    confirmPassword: z.string().min(6),
-  })
-  .refine((data) => data.password === data.confirmPassword, {
-    message: "Passwords do not match",
-    path: ["confirmPassword"],
-  });
+import { signUpFormSchema } from "@/types/forms";
+import { signUpAction } from "@/actions/auth";
+import { toast } from "sonner";
+import { useRouter } from "next/navigation";
 
 const SignUpForm = () => {
   const form = useForm<z.infer<typeof signUpFormSchema>>({
@@ -37,9 +29,17 @@ const SignUpForm = () => {
       confirmPassword: "",
     },
   });
+  const router = useRouter();
 
-  const onSubmit = (values: z.infer<typeof signUpFormSchema>) => {
+  const onSubmit = async (values: z.infer<typeof signUpFormSchema>) => {
     console.log(values);
+    const res = await signUpAction(values);
+    if (res.success) {
+      toast.success("User created successfully");
+      router.push("/courses");
+    } else {
+      toast.error(res?.error);
+    }
   };
 
   return (

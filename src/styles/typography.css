@@ -1,7 +1,19 @@
-:root {
-  
-  
-  h1{
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Write tailwind class to target all h1's */
+.h1 {
+  @apply text-4xl font-extrabold tracking-tight lg:text-5xl;
+}
+
+.ba{
+  @apply bg-red-500;
+
+}
+
+@layer components {
+  h1 {
     @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
   }
   h2 {

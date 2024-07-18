@@ -2,8 +2,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { getUser } from "@/lib/lucia";
+import { redirect } from "next/navigation";
 
-const page = () => {
+const page = async () => {
+  const user = await getUser();
+  if (!user) {
+    redirect("/signin");
+  }
   return (
     <div className="px-10 md:px-28 mt-16">
       <div className="">

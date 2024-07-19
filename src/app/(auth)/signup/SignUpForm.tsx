@@ -15,7 +15,6 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { signUpFormSchema } from "@/types/forms";
-import { signUpAction } from "@/actions/auth";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import { useStore } from "@/state/general";
@@ -35,14 +34,7 @@ const SignUpForm = () => {
   const router = useRouter();
 
   const onSubmit = async (values: z.infer<typeof signUpFormSchema>) => {
-    console.log(values);
-    const res = await signUpAction(values);
-    if (res.success) {
-      toast.success("User created successfully");
-      router.push("/courses");
-    } else {
-      toast.error(res?.error);
-    }
+    
   };
 
   return (

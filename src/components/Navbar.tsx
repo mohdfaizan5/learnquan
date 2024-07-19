@@ -11,20 +11,13 @@ import { Button } from "./ui/button";
 import Link from "next/link";
 import { Book, HambergerMenu, Home } from "iconsax-react";
 import { usePathname } from "next/navigation";
-import { getUser } from "@/lib/lucia";
 
-const Navbar = async () => {
+const Navbar = () => {
   let courseDashboard = false;
   const path = usePathname();
-  // console.log(path.split("/"));
-  // console.log(path.split("/").includes("courses"));
-  // console.log(path.split("/").length > 3);
   if (path.split("/").includes("courses") && path.split("/").length > 3) {
     courseDashboard = true;
   }
-
-  {}
-  const user = await getUser();
 
   if (!courseDashboard) {
     return (
@@ -56,21 +49,15 @@ const Navbar = async () => {
             </Link>
           </nav>
         </div>
-        {
-          // if user is logged in
-          user ? (
-            <div></div>
-          ) : (
-            <div className="sm:flex  hidden gap-2">
-              <Link href={"/login"}>
-                <Button variant={"outline"}>Login</Button>
-              </Link>
-              <Link href={"signup"}>
-                <Button variant={"default"}>Get started now</Button>
-              </Link>
-            </div>
-          )
-        }
+        <div className="sm:flex  hidden gap-2">
+          <Link href={"/login"}>
+            <Button variant={"outline"}>Login</Button>
+          </Link>
+          <Link href={"signup"}>
+            <Button variant={"default"}>Get started now</Button>
+          </Link>
+        </div>
+
         <div className="md:hidden">
           <Sheet key={"left"}>
             <SheetTrigger>

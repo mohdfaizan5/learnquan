@@ -15,7 +15,6 @@ import {
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
 import { signInFormSchema } from "@/types/forms";
-import { signInAction } from "@/actions/auth";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 
@@ -31,13 +30,7 @@ const SignInForm = () => {
   const router = useRouter();
   const onSubmit = async (values: z.infer<typeof signInFormSchema>) => {
     console.log(values);
-    const res = await signInAction(values);
-    if (res?.success) {
-      toast.success("Login successful");
-      router.push("/courses");
-    } else {
-      toast.error(res?.error);
-    }
+   
   };
 
   return (

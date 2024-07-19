@@ -1,14 +1,11 @@
 import React from "react";
 import SignInForm from "./SignInForm";
-import { getUser } from "@/lib/lucia";
 import { redirect } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft } from "iconsax-react";
 
 const page = async () => {
-  const user = await getUser();
-  if (user) redirect("/home");
   return (
     <div className="flex items-center flex-col md:flex-row-reverse justify-center min-h-[90vh] gap-2 ">
       <Link href={"/"} className="fixed top-5 left-5 flex items-center text-sm">

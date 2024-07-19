@@ -19,9 +19,9 @@ import { signUpAction } from "@/actions/auth";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import { useStore } from "@/state/general";
+import Link from "next/link";
 
 const SignUpForm = () => {
-  const { count, inc } = useStore();
 
   const form = useForm<z.infer<typeof signUpFormSchema>>({
     resolver: zodResolver(signUpFormSchema),
@@ -51,10 +51,6 @@ const SignUpForm = () => {
         onSubmit={form.handleSubmit(onSubmit)}
         className="flex flex-col items-center justify-center"
       >
-        <div>
-          <span>{count}</span>
-          <button onClick={inc}>one up</button>
-        </div>
         <FormField
           name="name"
           control={form.control}
@@ -114,6 +110,7 @@ const SignUpForm = () => {
           )}
         />
         <Button>Register</Button>
+        <Link className="text-sm mt-5" href="/login">Already have an account?</Link>
       </form>
     </Form>
   );

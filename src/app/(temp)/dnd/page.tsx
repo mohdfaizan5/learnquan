@@ -4,7 +4,7 @@ import { useState } from "react";
 import { CgMenuGridO } from "react-icons/cg";
 import { Reorder } from "framer-motion";
 
-const page = () => {
+const Page = () => {
   const [items, setItems] = useState([1, 2, 3, 4, 5]);
   const [items2, setItems2] = useState(["A", "B", "C", "D", "E"]);
 
@@ -54,4 +54,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

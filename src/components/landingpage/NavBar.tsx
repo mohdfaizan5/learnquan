@@ -19,8 +19,8 @@ const Navbar = () => {
   return (
     <header className="sticky right-0  top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-6">
       <div className="flex h-14 max-w-screen-2xl items-center justify-between ">
-        <Link href={"/"} className="flex items-center font-bold">
-          {/* <Image src={"/public/logo"} width={30} height={30} alt="logo" /> */}
+        <Link href={"/"} className="flex items-center font-bold text-xl">
+          <Image src={"/logo/logo-black-256x256.png"} width={30} height={30} alt="logo" />
           LearnQuan
         </Link>
         {/* <nav className="hidden md:flex text-xs items-center gap-2">

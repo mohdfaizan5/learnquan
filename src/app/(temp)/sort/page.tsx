@@ -1,13 +1,8 @@
-import React from 'react'
-import {SortableContext} from "@dnd-kit/sortable"
+import React from "react";
+import { SortableContext } from "@dnd-kit/sortable";
 
 const page = () => {
-  return (
-    <div>
-      <Sor
-      
-    </div>
-  )
-}
+  return <div></div>;
+};
 
-export default page
+export default page;

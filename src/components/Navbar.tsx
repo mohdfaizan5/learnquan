@@ -1,5 +1,15 @@
 "use client";
 import {
+  Menubar,
+  MenubarContent,
+  MenubarItem,
+  MenubarMenu,
+  MenubarSeparator,
+  MenubarShortcut,
+  MenubarTrigger,
+} from "@/components/ui/menubar";
+
+import {
   Sheet,
   SheetContent,
   SheetDescription,
@@ -11,32 +21,33 @@ import { Button } from "./ui/button";
 import Link from "next/link";
 import { Book, HambergerMenu, Home } from "iconsax-react";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
+import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 
 const Navbar = () => {
   let courseDashboard = false;
   const path = usePathname();
+  // console.log(path.split("/"));
+  // console.log(path.split("/").includes("courses"));
+  // console.log(path.split("/").length > 3);
   if (path.split("/").includes("courses") && path.split("/").length > 3) {
     courseDashboard = true;
   }
 
   if (!courseDashboard) {
     return (
-      <header className="fixed top-0 left-0 right-0 bg-white py-4 flex justify-between px-16 items-center z-50">
+      <header className="fixed top-0 left-0 right-0 bg-white py-4 flex justify-between px-16 items-center z-50 border-b">
         <div className="flex gap-10 items-center">
           <h3 className="text-2xl font-semibold flex items-center">
+            <Image
+              src={"/logo/logo-black-256x256.png"}
+              width={30}
+              height={30}
+              alt="logo"
+            />
             LearnQuan
           </h3>
           <nav className="text-black text-sm hidden md:flex gap-5 ">
-            <Link href={"/home"} className={`flex items-center gap-1 `}>
-              <Home size="20" />
-              <div
-                className={`hover:border-b-2 ${
-                  path.split("/")[1] == "home" && "border-b-2 border-black "
-                }`}
-              >
-                Home
-              </div>
-            </Link>
             <Link href={"/courses"} className={`flex items-center gap-1  `}>
               <Book size="20" color="#000000" />
               <div
@@ -49,13 +60,38 @@ const Navbar = () => {
             </Link>
           </nav>
         </div>
-        <div className="sm:flex  hidden gap-2">
-          <Link href={"/login"}>
-            <Button variant={"outline"}>Login</Button>
-          </Link>
-          <Link href={"signup"}>
-            <Button variant={"default"}>Get started now</Button>
-          </Link>
+        <div className="sm:flex  hidden ">
+          <Menubar className="border-none p-0 shadow-sm">
+            <MenubarMenu>
+              <MenubarTrigger className="border-none">
+                {/* <Link href={"/profile"}> */}
+                <Avatar className="size-9">
+                  <AvatarImage src="https://github.com/mohdfaizan5.png" />
+                  <AvatarFallback>MF</AvatarFallback>
+                </Avatar>
+                {/* </Link> */}
+              </MenubarTrigger>
+              <MenubarContent>
+                <Link href={"/profile"}>
+                  <MenubarItem>
+                    Profile
+                    <MenubarShortcut>CTRL P</MenubarShortcut>
+                  </MenubarItem>
+                </Link>
+                <MenubarSeparator />
+                <Link href={"/profile/settings"}>
+                  <MenubarItem>Settings</MenubarItem>
+                </Link>
+                {/* <MenubarItem>Share</MenubarItem> */}
+                <MenubarSeparator />
+                <MenubarItem className="">
+                  <Button variant="destructive" className="w-full">
+                    Logout
+                  </Button>
+                </MenubarItem>
+              </MenubarContent>
+            </MenubarMenu>
+          </Menubar>
         </div>
 
         <div className="md:hidden">

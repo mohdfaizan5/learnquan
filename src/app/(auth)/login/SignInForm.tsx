@@ -70,7 +70,7 @@ const SignInForm = () => {
 
         <Button className="w-full">Login</Button>
         <Link className="underline text-primary text-sm" href={"/signup"}>
-          Don't have an account?
+          Don&apos;t have an account?
         </Link>
       </form>
     </Form>

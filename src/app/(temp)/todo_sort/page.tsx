@@ -12,7 +12,7 @@ import { CSS } from "@dnd-kit/utilities";
 import React, { useState } from "react";
 import { CgMenuGridO } from "react-icons/cg";
 // www.youtube.com/watch?v=dL5SOdgMbRY
-const page = () => {
+const Page = () => {
   const [tasks, setTasks] = useState([
     { id: 1, title: "Go to Gym" },
     { id: 2, title: "Complete MDX" },
@@ -66,7 +66,7 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
 
 const EachTodo = ({ todo, id }: { todo: string; id: any }) => {
   const { listeners, attributes, setNodeRef, transform, transition } =

@@ -18,7 +18,23 @@ const lessonCompletedAction = async (courseSlug: string, lessonId: number) => {
   console.log("Lesson completed");
 };
 
-
+const IsLessonCompletedAction = async (
+  courseSlug: string,
+  lessonId: number
+) => {
+  const user = await auth();
+  console.log(courseSlug, lessonId);
+  const completedLessons = await prisma.userLessonCompletion.findFirst({
+    where: {
+      courseSlug: courseSlug,
+      userId: user?.user?.id,
+      lessonId: lessonId,
+    },
+  });
+  if (completedLessons) {
+    return true;
+  } else false;
+};
 
 const seedData = async () => {
   // seed data
@@ -28,6 +44,7 @@ const seedData = async () => {
   //     title: "Ratio",
   //     description:
   //       "In this course, you will learn about ratios and how to solve problems involving them.",
+  //     slug: "ratio",
   //   },
   // });
   // console.log(course);
@@ -53,4 +70,4 @@ const seedData = async () => {
   // console.log("Seeded data");
 };
 
-export { lessonCompletedAction, seedData };
+export { lessonCompletedAction, seedData, IsLessonCompletedAction };

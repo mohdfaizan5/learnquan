@@ -19,29 +19,32 @@ model User {
 }
 
 model Course {
-  id          Int      @id @default(autoincrement())
-  title       String
-  description String
-  lessons     Lesson[]
-  slug        String   @unique @default("")
+  id                   Int                    @id @default(autoincrement())
+  title                String
+  description          String
+  lessons              Lesson[]
+  slug                 String                 @unique @default(cuid())
+  UserLessonCompletion UserLessonCompletion[]
 }
 
 model Lesson {
-  id       Int    @id @default(autoincrement())
-  courseId Int
-  course   Course @relation(fields: [courseId], references: [id])
-  title    String
-  order    Int?
-
+  id                   Int                    @id @default(autoincrement())
+  courseId             Int
+  course               Course                 @relation(fields: [courseId], references: [id])
+  title                String
+  order                Int?
+  href                 String                 @default("")
   UserLessonCompletion UserLessonCompletion[]
 }
 
 model UserLessonCompletion {
-  id       Int    @id @default(autoincrement())
-  userId   String
-  lessonId Int
-  user     User   @relation(fields: [userId], references: [id])
-  lesson   Lesson @relation(fields: [lessonId], references: [id])
+  id         Int    @id @default(autoincrement())
+  userId     String
+  lessonId   Int
+  user       User   @relation(fields: [userId], references: [id])
+  lesson     Lesson @relation(fields: [lessonId], references: [id])
+  courseSlug String @default("")
+  course     Course @relation(fields: [courseSlug], references: [slug])
 
   @@unique([userId, lessonId]) // Ensures that the combination of userId and lessonId is unique
 }

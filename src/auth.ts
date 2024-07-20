@@ -23,25 +23,26 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         console.log("credentials", credentials);
 
         // const validationResult = signInFormSchema.safeParse(credentials); // validate the credentials (TODO)
-        const user = await prisma.user.findUnique({
+        const dbUser = await prisma.user.findUnique({
           where: {
             email: `${credentials.email}`,
           },
         });
-        console.log("user", user);
+        console.log("user", dbUser);
 
-        if (!user) {
+        if (!dbUser) {
           throw new CustomAuthError("No such email found");
         }
 
-        if (user.password !== credentials.password) {
+        if (dbUser.password !== credentials.password) {
           throw new CustomAuthError("Password is incorrect");
         }
 
-        return {
-          id: user.id,
-          email: user.email,
+        const user = {
+          id: dbUser.id,
+          email: dbUser.email,
         };
+        return user;
       },
     }),
   ],
@@ -50,13 +51,17 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   },
   callbacks: {
     // used when session in server is created
-    jwt: async ({ token, user, account, profile, session, trigger }) => {
-      token.id = token.sub as string;
+    jwt: async ({ token, user }) => {
+      if (user) {
+        token.id = token.sub as string;
+      }
       return token;
     },
     // used when client useSession is called
     session: async ({ session, token, user }) => {
-      session.user.id = token.id as string;
+      if (session?.user) {
+        session.user.id = token.id as string;
+      }
       // console.log("🛠🛠🛠session callback sesssion", session);
       // console.log("🛠🛠🛠session callback token ", token);
       return session;
@@ -66,4 +71,3 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     signIn: "/login",
   },
 });
-

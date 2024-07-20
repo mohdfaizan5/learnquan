@@ -1,0 +1,857 @@
+{
+  "results": [
+    {
+      "hits": [],
+      "nbHits": 26,
+      "page": 0,
+      "nbPages": 2,
+      "hitsPerPage": 20,
+      "exhaustiveNbHits": true,
+      "exhaustive": {
+        "nbHits": true
+      },
+      "query": "",
+      "params": "clickAnalytics=true&facets=%5B%5D&query=&tagFilters=",
+      "index": "brilliant-course-search-groups",
+      "queryID": "c9a0935396bfdecb06b860f0a1dc63a9",
+      "processingTimeMS": 1,
+      "processingTimingsMS": {
+        "_request": {
+          "roundTrip": 75
+        }
+      }
+    },
+    {
+      "hits": [
+        {
+          "document_type": "courses",
+          "course_id": 80,
+          "course_url": "https://brilliant.org/courses/electromagnetism/",
+          "course_name": "Electricity and Magnetism",
+          "course_slug": "electromagnetism",
+          "course_description": "Each day, you interact with tens, if not hundreds, of electrical devices, from the light in your kitchen to the computer, tablet or phone you are using right now. In this course, you will discover the physical laws of electricity and magnetism that let these devices perform their designed functions.\r\n\r\nThroughout this course, you will have opportunities to observe the principles of electricity and magnetism in action via demos that we handpicked and filmed. The focus, here, is on the physical observations that inspired Maxwell's famous field equations, which tell us how electric and magnetic fields operate across the universe.",
+          "course_concepts_include": "Charge\r\nCoulomb\u2019s Law\r\nElectric Fields\r\nConductors\r\nCapacitance\r\nCurrent\r\nHands-on Experiments\r\nKirchoff\u2019s Circuit Rules\r\nAmpere\u2019s Law\r\nFaraday\u2019s Law\r\nLorentz Force Law\r\nMagnetic Fields\r\nGauss\u2019 Law\r\nMaxwell\u2019s Equations",
+          "course_intro_text": "Discover what powers the devices you use, from your toaster to your cell phone.",
+          "course_image_url": "https://ds055uzetaobb.cloudfront.net/chapter/electromagnetism-AzFMTl.png",
+          "course_search_keywords": [],
+          "course_search_anti_keywords": [],
+          "course_is_published": true,
+          "chapter_names": ["Introduction", "Electric Fields"],
+          "objectID": "courses-80",
+          "_highlightResult": {
+            "course_name": {
+              "value": "Electricity and Magnetism",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "course_description": {
+              "value": "Each day, you interact with tens, if not hundreds, of electrical devices, from the light in your kitchen to the computer, tablet or phone you are using right now. In this course, you will discover the physical laws of electricity and magnetism that let these devices perform their designed functions.\r\n\r\nThroughout this course, you will have opportunities to observe the principles of electricity and magnetism in action via demos that we handpicked and filmed. The focus, here, is on the physical observations that inspired Maxwell's famous field equations, which tell us how electric and magnetic fields operate across the universe.",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "course_intro_text": {
+              "value": "Discover what powers the devices you use, from your toaster to your cell phone.",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "chapter_names": [
+              {
+                "value": "Introduction",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Electric Fields",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            ]
+          }
+        },
+        {
+          "document_type": "courses",
+          "course_id": 79,
+          "course_url": "https://brilliant.org/courses/multivariable-calculus/",
+          "course_name": "Multivariable Calculus",
+          "course_slug": "multivariable-calculus",
+          "course_description": "Change is an essential part of our world, and calculus helps us quantify it \u2014\u00a0multivariable calculus continues the story of calculus. Learn how tools like the derivative and integral generalize to functions depending on several independent variables, and discover some of the exciting new realms in physics and pure mathematics they unlock.",
+          "course_concepts_include": "Chain Rule\r\nExtreme Value Theorem\r\nGradient\r\nHessian Test for Critical Points\r\nJacobians & Variable Changes\r\nLagrange Multipliers\r\nLimits and Continuity\r\nMultiple Integrals\r\nMultivariable Functions & Graphs\r\nPartial Derivatives",
+          "course_intro_text": "Continue your calculus journey into the realm of multiple variables, exploring everything from vectors to volume.",
+          "course_image_url": "https://ds055uzetaobb.cloudfront.net/chapter/multivariable-calculus-LaHqvz.png",
+          "course_search_keywords": [],
+          "course_search_anti_keywords": [],
+          "course_is_published": true,
+          "chapter_names": [
+            "Limits with Many Variables",
+            "Derivatives",
+            "Optimization",
+            "Multiple Integrals"
+          ],
+          "objectID": "courses-79",
+          "_highlightResult": {
+            "course_name": {
+              "value": "Multivariable Calculus",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "course_description": {
+              "value": "Change is an essential part of our world, and calculus helps us quantify it \u2014\u00a0multivariable calculus continues the story of calculus. Learn how tools like the derivative and integral generalize to functions depending on several independent variables, and discover some of the exciting new realms in physics and pure mathematics they unlock.",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "course_intro_text": {
+              "value": "Continue your calculus journey into the realm of multiple variables, exploring everything from vectors to volume.",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "chapter_names": [
+              {
+                "value": "Limits with Many Variables",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Derivatives",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Optimization",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Multiple Integrals",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            ]
+          }
+        },
+        {
+          "document_type": "courses",
+          "course_id": 74,
+          "course_url": "https://brilliant.org/courses/geometry-fundamentals/",
+          "course_name": "Measurement",
+          "course_slug": "geometry-fundamentals",
+          "course_description": "Discover how intuitive geometry can be when you keep your assumptions simple and use your own logic and reasoning to set up your calculations.\r\n\r\nThis fundamentals course will introduce you to angle axioms, perimeter and area calculation strategies, coordinate geometry, 3D geometry, and more. This is the course that you should begin with if you're just starting your exploration of geometry on Brilliant.  \r\n\r\nSome prior experience with algebra is assumed, but you're in good shape to start this course if you can plot points and linear equations on a coordinate plane and use a variable to describe the relationship between the side length of a square and its area.\r\n\r\nAnd, by the end of this course, you\u2019ll be a skilled geometric problem-solver, well practiced at everything from proving the Pythagorean theorem to mixing algebraic and geometric techniques together on the coordinate plane.",
+          "course_concepts_include": "Angle Axioms\r\nMeasuring Areas\r\nParallel and Perpendicular Lines\r\nPerimeter\r\nSimilarity\r\nSurface Area\r\nThe Pythagorean Theorem\r\nThree-Dimensional Figures\r\nVolume",
+          "course_intro_text": "Start exploring geometry with an intuitive introduction to the essentials.",
+          "course_image_url": "https://ds055uzetaobb.cloudfront.net/chapter/geometry-fundamentals-R3GX1g.png",
+          "course_search_keywords": [],
+          "course_search_anti_keywords": [],
+          "course_is_published": true,
+          "chapter_names": [
+            "Polygons",
+            "Angles",
+            "Lengths",
+            "Scaling",
+            "Areas",
+            "Pythagoras' Geometry",
+            "Surface Area",
+            "Volume"
+          ],
+          "objectID": "courses-74",
+          "_highlightResult": {
+            "course_name": {
+              "value": "Measurement",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "course_description": {
+              "value": "Discover how intuitive geometry can be when you keep your assumptions simple and use your own logic and reasoning to set up your calculations.\r\n\r\nThis fundamentals course will introduce you to angle axioms, perimeter and area calculation strategies, coordinate geometry, 3D geometry, and more. This is the course that you should begin with if you're just starting your exploration of geometry on Brilliant.  \r\n\r\nSome prior experience with algebra is assumed, but you're in good shape to start this course if you can plot points and linear equations on a coordinate plane and use a variable to describe the relationship between the side length of a square and its area.\r\n\r\nAnd, by the end of this course, you\u2019ll be a skilled geometric problem-solver, well practiced at everything from proving the Pythagorean theorem to mixing algebraic and geometric techniques together on the coordinate plane.",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "course_intro_text": {
+              "value": "Start exploring geometry with an intuitive introduction to the essentials.",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "chapter_names": [
+              {
+                "value": "Polygons",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Angles",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Lengths",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Scaling",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Areas",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Pythagoras' Geometry",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Surface Area",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Volume",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            ]
+          }
+        },
+        {
+          "document_type": "courses",
+          "course_id": 73,
+          "course_url": "https://brilliant.org/courses/math-competition-fundamentals/",
+          "course_name": "Contest Math",
+          "course_slug": "math-competition-fundamentals",
+          "course_description": "Via intriguing problems and competition-style practice, we\u2019ll guide you through your training from start to finish. Improve your speed and accuracy while gaining an appreciation for how fun math can be. \r\n\r\nUpon completion, you\u2019ll have perfected your algebra, geometry, probability, and number sense game, and have the tools needed to successfully tackle math competitions at the level of MATHCOUNTS and the AMC8.",
+          "course_concepts_include": "Angle Hunting \r\nComposite Figures\r\nCounting Strategies\r\nFactorials\r\nMean, Median, Mode\r\nProbability\r\nProblem Solving\r\nPrime Factorization\r\nSequences and Series\r\nSimilarity\r\nVenn Diagrams",
+          "course_intro_text": "Learn the key techniques and train hard for contest math.",
+          "course_image_url": "https://ds055uzetaobb.cloudfront.net/chapter/math-competition-fundamentals-RwT0fZ.png",
+          "course_search_keywords": [],
+          "course_search_anti_keywords": [],
+          "course_is_published": true,
+          "chapter_names": [
+            "Introduction",
+            "Algebra: Equations",
+            "Algebra: Data",
+            "Geometry: Measures",
+            "Geometry: Similarity",
+            "Geometry: Composites",
+            "Combinatorics: Counting",
+            "Combinatorics: Probability",
+            "Number Theory: Efficiency",
+            "Number Theory: Factorization",
+            "AMC Preparation",
+            "AMC Algebra",
+            "Inequalities",
+            "Polynomials",
+            "Sequences and Series",
+            "Number Theory",
+            "Modular Arithmetic",
+            "Synthetic Geometry",
+            "Analytical Geometry",
+            "Trigonometry",
+            "Combinatorics",
+            "Probabilities",
+            "AMC Strategies"
+          ],
+          "objectID": "courses-73",
+          "_highlightResult": {
+            "course_name": {
+              "value": "Contest Math",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "course_description": {
+              "value": "Via intriguing problems and competition-style practice, we\u2019ll guide you through your training from start to finish. Improve your speed and accuracy while gaining an appreciation for how fun math can be. \r\n\r\nUpon completion, you\u2019ll have perfected your algebra, geometry, probability, and number sense game, and have the tools needed to successfully tackle math competitions at the level of MATHCOUNTS and the AMC8.",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "course_intro_text": {
+              "value": "Learn the key techniques and train hard for contest math.",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "chapter_names": [
+              {
+                "value": "Introduction",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Algebra: Equations",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Algebra: Data",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Geometry: Measures",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Geometry: Similarity",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Geometry: Composites",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Combinatorics: Counting",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Combinatorics: Probability",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Number Theory: Efficiency",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Number Theory: Factorization",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "AMC Preparation",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "AMC Algebra",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Inequalities",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Polynomials",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Sequences and Series",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Number Theory",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Modular Arithmetic",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Synthetic Geometry",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Analytical Geometry",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Trigonometry",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Combinatorics",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Probabilities",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "AMC Strategies",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            ]
+          }
+        },
+        {
+          "document_type": "courses",
+          "course_id": 71,
+          "course_url": "https://brilliant.org/courses/special-relativity/",
+          "course_name": "Special Relativity",
+          "course_slug": "special-relativity",
+          "course_description": "This course was written in collaboration with Aaron Miller, a PhD in physics from Penn State University, and was integrated into a YouTube video series on MinutePhysics.\r\n\r\nBeginning with famous thought experiments and a few intuitive principles from Newtonian mechanics, this course closely follows Einstein's arguments leading to the epiphany that time and space are a single entity, spacetime, where physical processes unfold.\r\n\r\nAfter gaining experience with the mathematical machinery of relativistic physics, you will open the door to high-energy phenomena and Einstein's famous relationship, E = mc\u00b2. In the end this course will boost you to the cusp of the most elegant of physical theories: general relativity.",
+          "course_concepts_include": "4-vectors\r\nLorentz Transformations\r\nMass-energy Equivalence\r\nSpacetime Paradoxes\r\nParticle Physics\r\nReference Frames\r\nSpacetime Curvature\r\nSpacetime Diagrams\r\nSpacetime Intervals\r\nTime Dilation",
+          "course_intro_text": "Get up to (light) speed on Einstein's theory of relativity.",
+          "course_image_url": "https://ds055uzetaobb.cloudfront.net/chapter/special-relativity-ZZpyj9.png",
+          "course_search_keywords": [],
+          "course_search_anti_keywords": [],
+          "course_is_published": true,
+          "chapter_names": [
+            "Reference Frames and Observers",
+            "Spacetime and Paradoxes",
+            "Energy and Dynamics"
+          ],
+          "objectID": "courses-71",
+          "_highlightResult": {
+            "course_name": {
+              "value": "Special Relativity",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "course_description": {
+              "value": "This course was written in collaboration with Aaron Miller, a PhD in physics from Penn State University, and was integrated into a YouTube video series on MinutePhysics.\r\n\r\nBeginning with famous thought experiments and a few intuitive principles from Newtonian mechanics, this course closely follows Einstein's arguments leading to the epiphany that time and space are a single entity, spacetime, where physical processes unfold.\r\n\r\nAfter gaining experience with the mathematical machinery of relativistic physics, you will open the door to high-energy phenomena and Einstein's famous relationship, E = mc\u00b2. In the end this course will boost you to the cusp of the most elegant of physical theories: general relativity.",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "course_intro_text": {
+              "value": "Get up to (light) speed on Einstein's theory of relativity.",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "chapter_names": [
+              {
+                "value": "Reference Frames and Observers",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Spacetime and Paradoxes",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Energy and Dynamics",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            ]
+          }
+        },
+        {
+          "document_type": "courses",
+          "course_id": 68,
+          "course_url": "https://brilliant.org/courses/graphing-and-modeling/",
+          "course_name": "Functions and Quadratics",
+          "course_slug": "graphing-and-modeling",
+          "course_description": "Understand functions as set mappings, tables, and graphs. Using these tools, learn how to work with functions and transform them and their graphs. Then, use the framework of functions to do a deep dive on quadratics. You'll explore factoring, completing the square, learn about polynomials, and eventually develop the quadratic equation.",
+          "course_concepts_include": "Absolute Value\r\nAsymptotes\r\nDomain and Range\r\nExponents\r\nFactoring Polynomials\r\nFunctions\r\nFunction Notation\r\nFunction Transformations\r\nPiecewise Functions\r\nProjectile Motion\r\nRational Functions\r\nThe Binomial Theorem\r\nThe Quadratic Formula",
+          "course_intro_text": "Learn about functions and how to work with them. Then, take a deep dive into quadratics.",
+          "course_image_url": "https://ds055uzetaobb.cloudfront.net/chapter/graphing-and-modeling-R2ewSf.png",
+          "course_search_keywords": [],
+          "course_search_anti_keywords": [],
+          "course_is_published": true,
+          "chapter_names": [
+            "Introducing Functions",
+            "Working with Functions",
+            "Solving Quadratics",
+            "Building the Quadratic Formula"
+          ],
+          "objectID": "courses-68",
+          "_highlightResult": {
+            "course_name": {
+              "value": "Functions and Quadratics",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "course_description": {
+              "value": "Understand functions as set mappings, tables, and graphs. Using these tools, learn how to work with functions and transform them and their graphs. Then, use the framework of functions to do a deep dive on quadratics. You'll explore factoring, completing the square, learn about polynomials, and eventually develop the quadratic equation.",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "course_intro_text": {
+              "value": "Learn about functions and how to work with them. Then, take a deep dive into quadratics.",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "chapter_names": [
+              {
+                "value": "Introducing Functions",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Working with Functions",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Solving Quadratics",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Building the Quadratic Formula",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            ]
+          }
+        },
+        {
+          "document_type": "courses",
+          "course_id": 53,
+          "course_url": "https://brilliant.org/courses/calculus-done-right/",
+          "course_name": "Calculus Fundamentals",
+          "course_slug": "calculus-done-right",
+          "course_description": "Calculus is the mathematical study of things that change: cars accelerating, planets moving around the sun, economies fluctuating. To study these changing quantities, a new set of tools - calculus - was developed in the 17th century, forever altering the course of math and science.\r\n\r\nThis course sets you on the path to calculus fluency. The first part provides a firm intuitive understanding of limits, the central idea underlying the entire subject. The second part applies limits to define derivatives, an indispensable tool for measuring change. By the end of the course you'll have practical calculus experience that any aspiring scientist, engineer, or mathematician needs.",
+          "course_concepts_include": "Continuity\r\nDerivatives\r\nExtrema\r\nImplicit Derivatives\r\nL'H\u00f4pital's Rule\r\nLimits\r\nNewton's Method\r\nPhysics Applications\r\nThe Chain Rule\r\nThe Squeeze Theorem",
+          "course_intro_text": "Begin your calculus journey by getting up to speed on limits and derivatives.",
+          "course_image_url": "https://ds055uzetaobb.cloudfront.net/chapter/calculus-done-right-G7NbRf.png",
+          "course_search_keywords": [],
+          "course_search_anti_keywords": [],
+          "course_is_published": true,
+          "chapter_names": [
+            "Introduction",
+            "Computing Limits",
+            "Derivatives",
+            "Computing Derivatives",
+            "Linear Approximation and Applications"
+          ],
+          "objectID": "courses-53",
+          "_highlightResult": {
+            "course_name": {
+              "value": "Calculus Fundamentals",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "course_description": {
+              "value": "Calculus is the mathematical study of things that change: cars accelerating, planets moving around the sun, economies fluctuating. To study these changing quantities, a new set of tools - calculus - was developed in the 17th century, forever altering the course of math and science.\r\n\r\nThis course sets you on the path to calculus fluency. The first part provides a firm intuitive understanding of limits, the central idea underlying the entire subject. The second part applies limits to define derivatives, an indispensable tool for measuring change. By the end of the course you'll have practical calculus experience that any aspiring scientist, engineer, or mathematician needs.",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "course_intro_text": {
+              "value": "Begin your calculus journey by getting up to speed on limits and derivatives.",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "chapter_names": [
+              {
+                "value": "Introduction",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Computing Limits",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Derivatives",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Computing Derivatives",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Linear Approximation and Applications",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            ]
+          }
+        },
+        {
+          "document_type": "courses",
+          "course_id": 50,
+          "course_url": "https://brilliant.org/courses/logic-deduction/",
+          "course_name": "Logic",
+          "course_slug": "logic-deduction",
+          "course_description": "The beginning of our introductory math journey is Logic. Through these challenging problem solving exercises, you'll construct the critical thinking skills that are the basis for mathematical reasoning. \r\n\r\nYou'll use limited information to make predictions \u2013 eliminating the impossible to uncover the truth. This course builds up to some truly mind-bending challenges!\r\n\r\nBy the end of this course, you'll be able to spot logical fallacies, navigate some strategic game theory, understand machine logic, and use the symbolic languages of logic to understand fun riddles.",
+          "course_concepts_include": "Binary\r\nTruth Tables\r\nLogic Gates\r\nVenn and Euler Diagrams\r\nPropositional Logic\r\nThe Square of Opposition\r\nDe Morgan's Laws\r\nInclusive and Exclusive OR\r\nCombinatorics\r\nKnight and Knave Puzzles\r\nCombinatorial Game Algorithms",
+          "course_intro_text": "Stretch your analytic muscles with truth-tellers, liars, logical robots, and more.",
+          "course_image_url": "https://ds055uzetaobb.cloudfront.net/chapter/logic-deduction-M7p41u.png",
+          "course_search_keywords": [],
+          "course_search_anti_keywords": [],
+          "course_is_published": true,
+          "chapter_names": [
+            "Introduction",
+            "Puzzles and Riddles",
+            "Multi-Level Thinking",
+            "The Rational Detective"
+          ],
+          "objectID": "courses-50",
+          "_highlightResult": {
+            "course_name": {
+              "value": "Logic",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "course_description": {
+              "value": "The beginning of our introductory math journey is Logic. Through these challenging problem solving exercises, you'll construct the critical thinking skills that are the basis for mathematical reasoning. \r\n\r\nYou'll use limited information to make predictions \u2013 eliminating the impossible to uncover the truth. This course builds up to some truly mind-bending challenges!\r\n\r\nBy the end of this course, you'll be able to spot logical fallacies, navigate some strategic game theory, understand machine logic, and use the symbolic languages of logic to understand fun riddles.",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "course_intro_text": {
+              "value": "Stretch your analytic muscles with truth-tellers, liars, logical robots, and more.",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "chapter_names": [
+              {
+                "value": "Introduction",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Puzzles and Riddles",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Multi-Level Thinking",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "The Rational Detective",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            ]
+          }
+        },
+        {
+          "document_type": "courses",
+          "course_id": 49,
+          "course_url": "https://brilliant.org/courses/basic-number-theory/",
+          "course_name": "Number Theory",
+          "course_slug": "basic-number-theory",
+          "course_description": "This course starts at the very beginning \u2014 covering all of the essential tools and concepts in number theory, and then applying them to computational art, cryptography (code-breaking), challenging logic puzzles, understanding infinity, and more!",
+          "course_concepts_include": "Divisibility Shortcuts\r\nExploring Infinity\r\nFactor Trees\r\nFermat's Little Theorem\r\nGreatest Common Divisor\r\nLeast Common Multiple\r\nModular Arithmetic\r\nModular Congruence\r\nModular Inverses \r\nPrime Factorization\r\nThe 100 Doors Puzzle\r\nTotients",
+          "course_intro_text": "Explore the powers of divisibility, modular arithmetic, and infinity.",
+          "course_image_url": "https://ds055uzetaobb.cloudfront.net/chapter/basic-number-theory-zlit1P.png",
+          "course_search_keywords": ["primes", "prime numbers"],
+          "course_search_anti_keywords": [],
+          "course_is_published": true,
+          "chapter_names": [
+            "Introduction",
+            "Factorization",
+            "GCD and LCM",
+            "Modular Arithmetic I",
+            "Modular Arithmetic II",
+            "Exploring Infinity"
+          ],
+          "objectID": "courses-49",
+          "_highlightResult": {
+            "course_name": {
+              "value": "Number Theory",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "course_description": {
+              "value": "This course starts at the very beginning \u2014 covering all of the essential tools and concepts in number theory, and then applying them to computational art, cryptography (code-breaking), challenging logic puzzles, understanding infinity, and more!",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "course_intro_text": {
+              "value": "Explore the powers of divisibility, modular arithmetic, and infinity.",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "chapter_names": [
+              {
+                "value": "Introduction",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Factorization",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "GCD and LCM",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Modular Arithmetic I",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Modular Arithmetic II",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Exploring Infinity",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            ]
+          }
+        },
+        {
+          "document_type": "courses",
+          "course_id": 48,
+          "course_url": "https://brilliant.org/courses/math-fundamentals/",
+          "course_name": "Mathematical Fundamentals",
+          "course_slug": "math-fundamentals",
+          "course_description": "In this course, we'll introduce the foundational ideas of algebra,  number theory, and logic that come up in nearly every topic across STEM.\r\n\r\nThis course is ideal for anyone who's either starting or re-starting their math education. You'll learn many essential problem solving techniques and you'll need to think creatively and strategically to solve each challenge. Each exploration is designed to push your mathematical skills to the next level. \r\n\r\nMath isn't about memorizing formulas, it's about problem solving. It's about looking at patterns and predicting the future of those patterns, and it's about solving complex problems by using deductive reasoning to turn them into simple ones.",
+          "course_concepts_include": "Algebraic Expressions\r\nArithmetic Operators\r\nCryptogram Puzzles\r\nDiscount Finance\r\nDivisibility\r\nDivisibility Rules\r\nLogic Fundamentals\r\nRates and Ratios\r\nSequences\r\nThe Distributive Property\r\nVariables",
+          "course_intro_text": "Learn the essential tools for mastering algebra, logic, and number theory.",
+          "course_image_url": "https://ds055uzetaobb.cloudfront.net/chapter/math-fundamentals-VTRUJP.png",
+          "course_search_keywords": [],
+          "course_search_anti_keywords": [],
+          "course_is_published": true,
+          "chapter_names": [
+            "Introduction",
+            "Logical Reasoning",
+            "Numerical Reasoning",
+            "Contextual Reasoning",
+            "Algebraic Reasoning",
+            "Geometric Reasoning"
+          ],
+          "objectID": "courses-48",
+          "_highlightResult": {
+            "course_name": {
+              "value": "Mathematical Fundamentals",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "course_description": {
+              "value": "In this course, we'll introduce the foundational ideas of algebra,  number theory, and logic that come up in nearly every topic across STEM.\r\n\r\nThis course is ideal for anyone who's either starting or re-starting their math education. You'll learn many essential problem solving techniques and you'll need to think creatively and strategically to solve each challenge. Each exploration is designed to push your mathematical skills to the next level. \r\n\r\nMath isn't about memorizing formulas, it's about problem solving. It's about looking at patterns and predicting the future of those patterns, and it's about solving complex problems by using deductive reasoning to turn them into simple ones.",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "course_intro_text": {
+              "value": "Learn the essential tools for mastering algebra, logic, and number theory.",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "chapter_names": [
+              {
+                "value": "Introduction",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Logical Reasoning",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Numerical Reasoning",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Contextual Reasoning",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Algebraic Reasoning",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Geometric Reasoning",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            ]
+          }
+        },
+        {
+          "document_type": "courses",
+          "course_id": 47,
+          "course_url": "https://brilliant.org/courses/computational-biology/",
+          "course_name": "Computational Biology",
+          "course_slug": "computational-biology",
+          "course_description": "This course was written in collaboration with quantitative biologists and biophysicists from leading research groups at Caltech and Duke.\r\n\r\nComputational biology merges the algorithmic thinking of the computer scientist with the problem solving approach of physics to address the problems of biology.\r\nSince the year 2000, an ocean of sequencing data has emerged that allows us to ask new questions.\r\n\r\nHere we'll develop intuition for a selection of foundational problems in computational biology like genome reconstruction, sequence alignment, and building phylogenetic trees to look at evolutionary relationships.\r\nWe also address certain physicochemical problems of molecular biology like RNA folding.",
+          "course_concepts_include": "Algorithms (Python)\r\nAncestry\r\nData Analysis (Python)\r\nDNA Sequencing\r\nForensics\r\nGenetics\r\nGenotyping\r\nMolecular Biology\r\nMutual Information\r\nNussinov Algorithm\r\nProtein Folding\r\nRNA Folding",
+          "course_intro_text": "Learn and apply a breadth of skills to tackle intriguing problems like RNA folding and genome reconstruction.",
+          "course_image_url": "https://ds055uzetaobb.cloudfront.net/chapter/computational-biology-4AHxKX.png",
+          "course_search_keywords": [],
+          "course_search_anti_keywords": [],
+          "course_is_published": true,
+          "chapter_names": [
+            "Biological Numeracy",
+            "Order and Information",
+            "Genomics",
+            "Molecular Folding"
+          ],
+          "objectID": "courses-47",
+          "_highlightResult": {
+            "course_name": {
+              "value": "Computational Biology",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "course_description": {
+              "value": "This course was written in collaboration with quantitative biologists and biophysicists from leading research groups at Caltech and Duke.\r\n\r\nComputational biology merges the algorithmic thinking of the computer scientist with the problem solving approach of physics to address the problems of biology.\r\nSince the year 2000, an ocean of sequencing data has emerged that allows us to ask new questions.\r\n\r\nHere we'll develop intuition for a selection of foundational problems in computational biology like genome reconstruction, sequence alignment, and building phylogenetic trees to look at evolutionary relationships.\r\nWe also address certain physicochemical problems of molecular biology like RNA folding.",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "course_intro_text": {
+              "value": "Learn and apply a breadth of skills to tackle intriguing problems like RNA folding and genome reconstruction.",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "chapter_names": [
+              {
+                "value": "Biological Numeracy",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Order and Information",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Genomics",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Molecular Folding",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            ]
+          }
+        }
+      ],
+      "nbHits": 101,
+      "page": 0,
+      "nbPages": 6,
+      "hitsPerPage": 20,
+      "exhaustiveNbHits": true,
+      "exhaustiveTypo": true,
+      "exhaustive": {
+        "nbHits": true,
+        "typo": true
+      },
+      "query": "",
+      "params": "clickAnalytics=true&facets=%5B%5D&query=&tagFilters=",
+      "index": "brilliant-courses",
+      "queryID": "e9109db6439c8a0fb3e22296a84fef3c",
+      "processingTimeMS": 1,
+      "processingTimingsMS": {
+        "_request": {
+          "roundTrip": 75
+        }
+      },
+      "serverTimeMS": 1
+    }
+  ]
+}

@@ -48,33 +48,8 @@ const CourseNavbar = () => {
                 </TooltipContent>
               </Tooltip>
             </Link>
-            <Link href={"2"} className="block">
-              <Tooltip>
-                <TooltipTrigger className="bg-green-500  w-20 h-2.5 rounded-full"></TooltipTrigger>
-                <TooltipContent>
-                  <p>Chapter 2</p>
-                </TooltipContent>
-              </Tooltip>
-            </Link>
-            <Link href={"3"} className="block">
-              <Tooltip>
-                <TooltipTrigger className="bg-green-500  w-20 h-2.5 rounded-full"></TooltipTrigger>
-                <TooltipContent>
-                  <p>Chapter 2</p>
-                </TooltipContent>
-              </Tooltip>
-            </Link>
-            <Link href={"2"} className="block">
-              <Tooltip>
-                <TooltipTrigger className="bg-green-500  w-20 h-2.5 rounded-full"></TooltipTrigger>
-                <TooltipContent>
-                  <p>Chapter 2</p>
-                </TooltipContent>
-              </Tooltip>
-            </Link>
           </div>
         </TooltipProvider>
-
         <Link href={"/home"} className="flex items-center gap-1">
           <ArrowRight />
         </Link>

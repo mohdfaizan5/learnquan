@@ -17,11 +17,10 @@ import { Input } from "@/components/ui/input";
 import { signUpFormSchema } from "@/types/forms";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
-import { useStore } from "@/state/general";
 import Link from "next/link";
+import { signUpAction } from "@/actions/auth.action";
 
 const SignUpForm = () => {
-
   const form = useForm<z.infer<typeof signUpFormSchema>>({
     resolver: zodResolver(signUpFormSchema),
     defaultValues: {
@@ -34,7 +33,14 @@ const SignUpForm = () => {
   const router = useRouter();
 
   const onSubmit = async (values: z.infer<typeof signUpFormSchema>) => {
-    
+    console.log(values);
+    const res = await signUpAction(values);
+    if (res.success) {
+      toast.success(res.data);
+      router.push("/login");
+    } else {
+      toast.error(res.error);
+    }
   };
 
   return (
@@ -102,7 +108,9 @@ const SignUpForm = () => {
           )}
         />
         <Button>Register</Button>
-        <Link className="text-sm mt-5" href="/login">Already have an account?</Link>
+        <Link className="text-sm mt-5 text-blue-600" href="/login">
+          Already have an account?
+        </Link>
       </form>
     </Form>
   );

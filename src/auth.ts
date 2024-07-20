@@ -3,6 +3,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import { signInFormSchema } from "@/types/forms";
 import { prisma } from "./lib/prisma";
 import { z } from "zod";
+import { getUserDetails } from "./actions/auth.action";
 
 class CustomAuthError extends CredentialsSignin {
   code = "Something went wrong while authenticating";
@@ -44,9 +45,21 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       },
     }),
   ],
+  session: {
+    strategy: "jwt",
+  },
   callbacks: {
-    jwt: async ({ token, user }) => {
+    // used when session in server is created
+    jwt: async ({ token, user, account, profile, session, trigger }) => {
+      token.id = token.sub as string;
       return token;
+    },
+    // used when client useSession is called
+    session: async ({ session, token, user }) => {
+      session.user.id = token.id as string;
+      // console.log("🛠🛠🛠session callback sesssion", session);
+      // console.log("🛠🛠🛠session callback token ", token);
+      return session;
     },
   },
   pages: {
@@ -54,9 +67,3 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   },
 });
 
-// function (credentials) ->
-// step 1: validate the credentials
-// step 2: check if user exists
-// step 3: check if password is correct
-// final step: return user object if user is found and password is correct
-// xyz

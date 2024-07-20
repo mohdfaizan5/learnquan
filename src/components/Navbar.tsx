@@ -8,7 +8,6 @@ import {
   MenubarShortcut,
   MenubarTrigger,
 } from "@/components/ui/menubar";
-
 import {
   Sheet,
   SheetContent,
@@ -23,6 +22,7 @@ import { Book, HambergerMenu, Home } from "iconsax-react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import Logout from "./client/Logout";
 
 const Navbar = () => {
   let courseDashboard = false;
@@ -85,16 +85,14 @@ const Navbar = () => {
                 {/* <MenubarItem>Share</MenubarItem> */}
                 <MenubarSeparator />
                 <MenubarItem className="">
-                  <Button variant="destructive" className="w-full">
-                    Logout
-                  </Button>
+                  <Logout/>
                 </MenubarItem>
               </MenubarContent>
             </MenubarMenu>
           </Menubar>
         </div>
 
-        <div className="md:hidden">
+        <div className="hidden">
           <Sheet key={"left"}>
             <SheetTrigger>
               <HambergerMenu />

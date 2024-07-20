@@ -3,8 +3,11 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useState } from "react";
 import { CgMenuGridO } from "react-icons/cg";
 import { Reorder } from "framer-motion";
+import { useSession } from "next-auth/react";
 
 const Page = () => {
+  const session = useSession()
+  console.log("Session", session);
   const [items, setItems] = useState([1, 2, 3, 4, 5]);
   const [items2, setItems2] = useState(["A", "B", "C", "D", "E"]);
 

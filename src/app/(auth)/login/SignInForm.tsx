@@ -17,6 +17,8 @@ import Link from "next/link";
 import { signInFormSchema } from "@/types/forms";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
+import { signIn } from "@/auth";
+import { signInAction } from "@/actions/auth.action";
 
 const SignInForm = () => {
   const form = useForm<z.infer<typeof signInFormSchema>>({
@@ -30,7 +32,19 @@ const SignInForm = () => {
   const router = useRouter();
   const onSubmit = async (values: z.infer<typeof signInFormSchema>) => {
     console.log(values);
-   
+    try {
+      const result = await signInAction(values);
+      if (result.success) {
+        toast.success("Login Success");
+        router.push("/courses");
+      } else {
+        console.log("Login Failed", result.error);
+        toast.error(`Login Failed: ${result.error}`);
+      }
+    } catch (error) {
+      console.log(error);
+      console.log("Login Failed");
+    }
   };
 
   return (

@@ -7,7 +7,7 @@ import { ArrowLeft } from "iconsax-react";
 
 const page = async () => {
   return (
-    <div className="flex items-center flex-col md:flex-row-reverse justify-center min-h-[90vh] gap-2 ">
+    <div className="flex items-center flex-col md:flex-row-reverse justify-center min-h-[90vh] gap-10 md:gap-2  mt-20 md:mt-5">
       <Link href={"/"} className="fixed top-5 left-5 flex items-center text-sm">
         {/* <Image src={"/public/logo"} width={30} height={30} alt="logo" /> */}
         <ArrowLeft />

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import {
   Tooltip,
@@ -17,15 +18,19 @@ import {
 import { AiOutlineThunderbolt } from "react-icons/ai";
 import { Button } from "./ui/button";
 import Link from "next/link";
+import { useTableOfContentState } from "@/store/tableOfContent";
 
 const CourseNavbar = () => {
+  const lessons = useTableOfContentState((state) => state.lessons);
+  console.log("lessons", lessons);
   return (
     <header
       className="fixed top-0 left-0 right-0 bg-white py-4 border-b flex justify-between px-16 items-center "
       style={{ zIndex: 100 }}
     >
       <div className="flex gap-10 items-center">
-        <Link href={"/home"}>
+        {/* Add a confirmation message to before exiting (:TODO) */}
+        <Link href={"/courses"}>
           <Add
             className="rotate-45"
             size="40"
@@ -35,24 +40,39 @@ const CourseNavbar = () => {
         </Link>
       </div>
       <nav className="text-black text-sm hidden md:flex gap-5 items-center">
-        <Link href={"/courses"} className="flex items-center gap-1">
+        {/* <Link href={"/courses"} className="flex items-center gap-1">
           <ArrowLeft />
-        </Link>
+        </Link> */}
         <TooltipProvider>
           <div className=" bg-gray-200 rounded-full flex gap-1 h-2.5">
-            <Link href={"1"} className="block">
-              <Tooltip>
-                <TooltipTrigger className="bg-green-500  w-20 h-2.5 rounded-full"></TooltipTrigger>
-                <TooltipContent>
-                  <p>Chapter 1</p>
-                </TooltipContent>
-              </Tooltip>
-            </Link>
+            {lessons.map((lesson, i) => {
+              if (lesson.isCompleted) {
+                return (
+                  <Link href={lesson.href} className="block">
+                    <Tooltip>
+                      <TooltipTrigger className="bg-green-500  w-20 h-2.5 rounded-full"></TooltipTrigger>
+                      <TooltipContent>
+                        <p>Chapter 1</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </Link>
+                );
+              } else {
+                return (
+                  <Tooltip>
+                    <TooltipTrigger className="bg-slate-500  w-20 h-2.5 rounded-full"></TooltipTrigger>
+                    <TooltipContent>
+                      <p>Chapter 1</p>
+                    </TooltipContent>
+                  </Tooltip>
+                );
+              }
+            })}
           </div>
         </TooltipProvider>
-        <Link href={"/home"} className="flex items-center gap-1">
+        {/* <Link href={"/home"} className="flex items-center gap-1">
           <ArrowRight />
-        </Link>
+        </Link> */}
       </nav>
       <div className="sm:flex items-center  hidden gap-2">
         0 <AiOutlineThunderbolt className="text-xl text-green-800 -rotate-12" />

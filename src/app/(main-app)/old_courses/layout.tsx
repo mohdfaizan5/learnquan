@@ -1,5 +1,5 @@
-import Navbar from "@/components/Navbar";
 import type { Metadata } from "next";
+import "@/styles/courseContent.css";
 
 export const metadata: Metadata = {
   title: "Courses",
@@ -13,7 +13,6 @@ export default async function RootLayout({
 }>) {
   return (
     <div>
-      <Navbar />
       {children}
     </div>
   );

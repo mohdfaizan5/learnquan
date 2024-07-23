@@ -1,40 +1,31 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import { allCourses } from "@/config/courses";
 import {
   CoursePageDisplayCard,
   TableOfContentBox,
 } from "@/components/course/CoursePage";
+
+import { useTableOfContentState } from "@/store/tableOfContent";
+import { getTableOfContentAction } from "@/actions/state.action";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { prisma } from "@/lib/prisma";
-import { auth } from "@/auth";
 
 export const tableOfContext = allCourses.ratio.lessons;
 
-const page = async () => {
-  const user = await auth();
-  const lessons = await prisma.lesson.findMany({
-    where: { courseId: 1 }, // Filter by course ID
-    orderBy: { order: "asc" }, // Sort by order field in ascending order
-  });
-  // console.log(lessons);
-  const completedLessons = await prisma.userLessonCompletion.findMany({
-    where: {
-      courseSlug: "ratio",
-      userId: user?.user?.id,
-    },
-  });
-  // console.log(completedLessons);
-
-  const finalLessons = lessons.map((lesson) => {
-    const isCompleted = completedLessons.some(
-      (completion) => completion.lessonId === lesson.id
-    );
-    return { ...lesson, isCompleted };
-  });
+const page = () => {
+  const finalLessons = useTableOfContentState((state) => state.lessons);
   let pointNextLesson = false;
-  // console.log(finalLessons);
-
+  const update = useTableOfContentState((state) => state.update);
+  useEffect(() => {
+    async function getTableOfContent() {
+      const res = await getTableOfContentAction("ratio", 1);
+      console.log(res);
+      update(res);
+    }
+    getTableOfContent();
+  }, []);
+  console.log(";😇😇", finalLessons);
   return (
     <main className="  mt-20 flex flex-col md:flex-row justify-end">
       <section className="md:fixed md:left-36 md:mt-16">

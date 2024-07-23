@@ -36,7 +36,7 @@ const Navbar = () => {
 
   if (!courseDashboard) {
     return (
-      <header className="fixed top-0 left-0 right-0 bg-white py-4 flex justify-between px-5 md:px-16 items-center z-50 border-b">
+      <header className=" top-0 left-0 right-0 bg-white py-4 flex justify-between px-5 md:px-16 items-center z-50 border-b">
         <div className="flex gap-10 items-center">
           <h3 className="text-2xl font-semibold flex items-center">
             <Image

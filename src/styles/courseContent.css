@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+p{
+  @apply mt-5 text-[#010000]  leading-7;
+}

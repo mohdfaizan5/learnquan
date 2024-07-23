@@ -9,18 +9,33 @@ import {
   lessonCompletedAction,
 } from "@/actions/course.action";
 import { usePathname } from "next/navigation";
+import MermaidDaigram from "@/components/client/MermaidDaigram";
+import CourseNavbar from "@/components/CourseNavbar";
 
 const Page = () => {
   const path = usePathname();
   console.log(path);
   return (
     <div className="flex flex-col pt-20 items-center max-w-[30rem] mx-auto px-5 gap-2 ">
+      <CourseNavbar />
       <Image src={"/svgs/abstract-art-6.svg"} height={200} width={300} alt="" />
       <h2 className="font-bold mt-1">Welcome to Ratio</h2>
       <p className="text-center">
         In this course, you will learn about ratios and how to solve problems
         involving them.
       </p>
+      <MermaidDaigram
+        code={`graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;`}
+      />
+
+    {}
+
+
+      
       {/* final button */}
       <Link className="w-full my-5" href={"2"}>
         <Button

@@ -6,6 +6,7 @@ import Image from "next/image";
 import { ArrowLeft } from "iconsax-react";
 import { useRouter } from "next/navigation";
 import { Quiz } from "@/components/client/Quiz";
+import MermaidDaigram from "@/components/client/MermaidDaigram";
 
 const Page = () => {
   const [count, setCount] = useState(6);
@@ -77,6 +78,10 @@ const Page = () => {
               <li>and non negative</li>
             </ul>
           </p>
+          <MermaidDaigram
+            code={`graph TD;
+    A-->B`}
+          />
         </div>
       )}
       {count <= 2 && (
@@ -93,6 +98,11 @@ const Page = () => {
             what is differs it from natural numbers is whole numbers start from
             0
           </p>
+          <MermaidDaigram
+            code={`graph TD;
+    A-->B
+    B-->C`}
+          />
         </div>
       )}
       {count <= 1 && (
@@ -108,6 +118,12 @@ const Page = () => {
           <p className="max-w-[30rem]">
             and integers includes -1, -2 ... and so on
           </p>
+          <MermaidDaigram
+            code={`graph TD;
+  A-->B
+  B-->C
+  C-->D`}
+          />
         </div>
       )}
 

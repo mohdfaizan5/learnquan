@@ -26,9 +26,9 @@ const page = async () => {
       <h4>👋 Hey {user?.user?.name || user?.user?.email?.split("@")[0]}</h4>
       coursesEnrolled
       <section className="flex">
-        {coursesEnrolled.map((course) => {
+        {coursesEnrolled.map((course, i) => {
           return (
-            <Card className="w-96">
+            <Card className="w-96" key={i}>
               <CardHeader>
                 <CardTitle>{course.course.title}</CardTitle>
                 {/* <CardDescription>Card Description</CardDescription> */}

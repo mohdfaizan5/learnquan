@@ -48,7 +48,7 @@ const CourseNavbar = () => {
             {lessons.map((lesson, i) => {
               if (lesson.isCompleted) {
                 return (
-                  <Link href={lesson.href} className="block">
+                  <Link href={lesson.href} className="block" key={i}>
                     <Tooltip>
                       <TooltipTrigger className="bg-green-500  w-20 h-2.5 rounded-full"></TooltipTrigger>
                       <TooltipContent>
@@ -59,7 +59,7 @@ const CourseNavbar = () => {
                 );
               } else {
                 return (
-                  <Tooltip>
+                  <Tooltip key={i}>
                     <TooltipTrigger className="bg-slate-500  w-20 h-2.5 rounded-full"></TooltipTrigger>
                     <TooltipContent>
                       <p>Chapter 1</p>

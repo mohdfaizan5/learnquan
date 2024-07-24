@@ -11,7 +11,7 @@ const lessonCompletedAction = async (courseSlug: string, lessonId: number) => {
   await prisma.userLessonCompletion.create({
     data: {
       lessonId: lessonId as number,
-      userId: user?.user?.id,
+      userId: user?.user?.id as string,
       courseSlug: courseSlug,
     },
   });

@@ -32,7 +32,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "contentlayer": "^0.3.4",
-    "framer-motion": "^11.3.6",
+    "framer-motion": "^11.3.12",
     "iconsax-react": "^0.0.8",
     "lucia": "^3.2.0",
     "mermaid": "^10.9.1",

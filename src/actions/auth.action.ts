@@ -36,6 +36,10 @@ const signUpAction = async (data: z.infer<typeof signUpFormSchema>) => {
         data: "User created successfully",
       };
     }
+    return {
+      success: false,
+      error: "User creation failed",
+    };
   } catch (error) {
     return {
       success: false,

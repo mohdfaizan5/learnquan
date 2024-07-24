@@ -1,4 +1,4 @@
-import { findLessonsById, getCompletedLessons } from "@/actions/state.action";
+// import { findLessonsById, getCompletedLessons } from "@/actions/state.action";
 import { create } from "zustand";
 
 // a type to store array of objects with

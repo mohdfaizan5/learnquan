@@ -38,7 +38,7 @@ const Navbar = () => {
     return (
       <header className=" top-0 left-0 right-0 bg-white py-4 flex justify-between px-5 md:px-16 items-center z-50 border-b">
         <div className="flex gap-10 items-center">
-          <h3 className="text-2xl font-semibold flex items-center">
+          <Link href={"/"} className="text-2xl font-semibold flex items-center">
             <Image
               src={"/logo/logo-black-256x256.png"}
               width={30}
@@ -46,7 +46,7 @@ const Navbar = () => {
               alt="logo"
             />
             LearnQuan
-          </h3>
+          </Link>
           <nav className="text-black text-sm hidden md:flex gap-5 ">
             <Link href={"/courses"} className={`flex items-center gap-1  `}>
               <Book size="20" color="#000000" />
@@ -92,7 +92,7 @@ const Navbar = () => {
           </Menubar>
         </div>
 
-        <div className="hidden">
+        {/* <div className="hidden">
           <Sheet key={"left"}>
             <SheetTrigger>
               <HambergerMenu />
@@ -110,7 +110,7 @@ const Navbar = () => {
               </SheetHeader>
             </SheetContent>
           </Sheet>
-        </div>
+        </div> */}
       </header>
     );
   }

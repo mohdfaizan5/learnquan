@@ -9,11 +9,11 @@ export const Course = defineDocumentType(() => ({
   contentType: "mdx",
   fields: {
     title: { type: "string", required: true },
-    description: { type: "string" },
+    description: { type: "string", optional: true },
     order: { type: "number" },
   },
   // write a slug field based on the file path
-  
+
   computedFields: {
     slug: {
       type: "string",
@@ -30,7 +30,9 @@ export default makeSource({
   contentDirPath: "content/",
   documentTypes: [Course],
   mdx: {
-    remarkPlugins: [remarkGfm],
+    remarkPlugins: [
+      // w
+    ],
     rehypePlugins: [
       rehypeSlug,
       [

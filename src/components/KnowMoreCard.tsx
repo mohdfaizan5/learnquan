@@ -11,7 +11,7 @@ import { TbPointerQuestion } from "react-icons/tb";
 const KnowMoreCard = ({ word, meaning }: { word: string; meaning: string }) => {
   return (
     <HoverCard>
-      <HoverCardTrigger className="underline decoration-primary px-1  items-center inline-flex">
+      <HoverCardTrigger className=" underline decoration-primary px-1  items-center inline-flex">
         {word}
         <TbPointerQuestion className="inline size-4" />
       </HoverCardTrigger>

@@ -3,19 +3,24 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { allCourses } from "contentlayer/generated";
+import { prisma } from "@/lib/prisma";
 
 const page = async () => {
+  const coursesMetaData = await prisma.course.findMany({});
+  console.log(coursesMetaData);
   return (
     <div className="px-10 md:px-28 mt-16">
       <div className="">
         <h3 className="text-xl pt-10 font-semibold mb-2">Continue </h3>
         <section className="flex flex-col gap-3 mx-auto w-full  md:flex-row">
-          <EachBigCard
-            image="/svgs/surreal-hourglass.svg"
-            title="Intro To Python"
-            href="/courses/intro-to-ml"
-          />
-          <EachBigCard
+          {coursesMetaData.map((course, i) => (
+            <EachBigCard
+              image="/svgs/surreal-hourglass.svg"
+              title={course.title}
+              href={`/courses/${course.slug}`}
+            />
+          ))}
+          {/* <EachBigCard
             image="/svgs/abstract-art-4.svg"
             title="Numbers System"
             href="/courses/numbers-system"
@@ -24,7 +29,7 @@ const page = async () => {
             image="/svgs/abstract-art-3.svg"
             title="Programming In C"
             href="/courses/intro-to-python"
-          />
+          /> */}
         </section>
         <h3 className="text-2xl mt-10 mb-3">All Modules</h3>
         <section className="grid grid-cols-2 md:grid-cols-5 space-y-2 items-center">
@@ -59,7 +64,7 @@ const EachBigCard = ({
         <Image src={image} alt="" width={180} height={180} />
       </CardContent>
       <CardHeader className="p-0">
-        <h4 className="font-semibold">{title}</h4>
+        <h4 className="font-semibold text-center">{title}</h4>
         <div className="text-sm p-0">
           {/* <h5 className="p-0">We made solving them very easy</h5> */}
           <Link href={href}>

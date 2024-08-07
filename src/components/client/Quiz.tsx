@@ -33,10 +33,10 @@ export const Quiz = ({
   };
   const [isCorrectAnswer, setIsCorrectAnswer] = useState<null | boolean>(null);
   return (
-    <div className={`flex flex-col  items-start mt-20 ${className}`}>
+    <div className={`flex flex-col  items-start mt-20 ${className} bg-slate-100/90 px-4 py-3 rounded-md`}>
       <h4>{question}</h4>
       <form
-        className={`py-3 my-5 w-full`}
+        className={`py-3 mt-5 w-full`}
         //   ${isCorrectAnswer == false ? "border border-red-400" : ""}
         onSubmit={handleSubmit((data) => handleQuiz(data))}
       >

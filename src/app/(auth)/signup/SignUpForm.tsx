@@ -19,6 +19,7 @@ import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { signUpAction } from "@/actions/auth.action";
+import { useFormStatus } from "react-dom";
 
 const SignUpForm = () => {
   const form = useForm<z.infer<typeof signUpFormSchema>>({
@@ -40,8 +41,10 @@ const SignUpForm = () => {
       router.push("/login");
     } else {
       toast.error(res.error);
+      // BUG: The error is not displayed in the toast
     }
   };
+  const { pending } = useFormStatus();
 
   return (
     <Form {...form}>
@@ -107,7 +110,8 @@ const SignUpForm = () => {
             </FormItem>
           )}
         />
-        <Button>Register</Button>
+        {/* TODO: Add spinner here */}
+        <Button disabled={pending}>{pending ? "Loading " : "Register"}</Button>
         <Link className="text-sm mt-5 text-blue-600" href="/login">
           Already have an account?
         </Link>

@@ -34,12 +34,9 @@ const CoursePageDisplayCard = ({
         </p>
       </CardContent>
       <CardHeader className="p-0 mt-2">
-        <h2 className="font-semibold text-lg">{title}</h2>
-        <div className="text-sm p-0">
-          <h5 className="p-0">
-            {description}
-          </h5>
-        </div>
+        <h2 className="font-semibold text-3xl">{title}</h2>
+
+        <h5 className="p-0 text-sm text-black/80">{description}</h5>
       </CardHeader>
     </Card>
   );

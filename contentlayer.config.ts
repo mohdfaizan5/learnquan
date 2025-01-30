@@ -1,5 +1,6 @@
 import { defineDocumentType, makeSource } from "contentlayer/source-files";
 import remarkGfm from "remark-gfm";
+import codeImport from 'remark-code-import';
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeSlug from "rehype-slug";
 
@@ -31,7 +32,7 @@ export default makeSource({
   documentTypes: [Course],
   mdx: {
     remarkPlugins: [
-      // w
+      remarkGfm
     ],
     rehypePlugins: [
       rehypeSlug,

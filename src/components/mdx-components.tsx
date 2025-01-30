@@ -31,6 +31,7 @@ const components = {
       {props.children}
     </blockquote>
   ),
+  
   //quoting code block
   // pre: ({ className, ...props }: componentsProps) => (
   //   <pre
@@ -39,7 +40,7 @@ const components = {
   //     {...props}
   //   />
   // ),
-  
+
   // how to convert `sample` text block in mdx to styled component
   // sample: ({ children }) => {
   //   return (
@@ -48,6 +49,7 @@ const components = {
   //     </pre>
   //   );
   // },
+
 
   Quiz,
   Diagram: MermaidDiagram,
@@ -78,7 +80,7 @@ const components = {
   ),
   code: ({ children }: { children: React.ReactNode }) => (
     <code
-      className="bg-black px-3 text-white mt-3 rounded p-2"
+      className="bg-slate-950 px-3 text-white mt-3 rounded p-2"
       suppressHydrationWarning
     >
       {children}
